@@ -1,0 +1,221 @@
+.header
+    position: absolute
+    top: 0
+    z-index: 100
+    width: 100%
+    transition: background 0.4s
+    &__wrapper
+        display: flex
+        align-items: center
+        padding: 44px 0
+    &__language
+        position: relative
+        display: none
+        margin-left: auto
+        min-width: 26px
+        min-height: 22px
+        max-width: 26px
+        max-height: 22px
+        background-image: url(../img/dist/sprite.svg#icon-flag-russia)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            display: block
+            width: 100%
+            height: 100%
+            background: rgba($dark-color, 0.6)
+            transition: background 0.4s
+        &:hover
+            &::before
+                background: rgba($dark-color, 0)
+
+.nav
+    &__list
+        display: flex
+        align-items: center
+        padding: 0 12px
+    &__item + &__item
+        margin-left: 36px
+    &__link
+        padding: 10.5px 0
+        font-size: 20px
+        color: $white-color
+        &:hover
+            color: $red-color
+
+.hamburger
+    position: relative
+    z-index: 100
+    display: inline-block
+    padding: 0
+    margin: 0
+    min-width: 38px
+    height: 28px
+    font-size: 0
+    text-align: center
+    background: none
+    border: none
+    cursor: pointer
+    transition: all 0.4s ease-in-out
+    &:focus
+        outline: none
+    &--active
+        .hamburger__inner
+            height: 1px
+            background: $white-color
+            &:first-child
+                top: 10px
+                transform: rotate(45deg)
+            &:nth-child(2)
+                width: 0
+                opacity: 0
+            &:last-child
+                top: 10px
+                transform: rotate(-45deg)
+    &__inner
+        display: block
+        position: absolute
+        width: 100%
+        height: 1px
+        background: $white-color
+        transition: all 0.4s ease-in-out
+        &:first-child
+            top: 0
+        &:nth-child(2)
+            top: 14px
+        &:last-child
+            top: 28px
+
+// animation
+@keyframes fadeInRight
+    0%
+        left: 50px
+        opacity: 0
+    100%
+        left: 0
+        transform: rotate(0deg)
+        opacity: 1
+
+// media
+@media (max-width: 1279px)
+    .nav
+        &__list
+            padding: 0
+        &__item + &__item
+            margin-left: 26px
+
+@media (min-width: 1024px)
+    .header
+        &:hover
+            background: rgba($dark-color, 0.6)
+            backdrop-filter: blur(40px)
+            .header__language
+                display: block
+    .hamburger
+        display: none
+    .overlay
+        display: flex
+        align-items: center
+        margin-left: 46px
+        width: 100%
+
+@media (max-width: 1023px)
+    .header
+        &__wrapper
+            justify-content: space-between
+            padding: 30px 0
+        &__language
+            display: block
+    .overlay
+        position: fixed
+        top: 0
+        right: 0
+        z-index: 100
+        transform-origin: right top
+        transform: scale(0)
+        overflow: hidden
+        visibility: hidden
+        display: flex
+        flex-direction: column-reverse
+        padding: 40px 38px
+        width: 277px
+        height: 100vh
+        height: calc(var(--vh, 1vh) * 100)
+        opacity: 0
+        background: $primary-color
+        transition: all 0.4s ease-in-out
+        &--open
+            transform: scale(1)
+            visibility: visible
+            opacity: 0.99
+            .nav__item
+                display: block
+                animation: fadeInRight 0.5s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards
+                animation-delay: 0.4s
+                transform-origin: bottom
+                &:nth-of-type(2)
+                    animation-delay: 0.2s
+                &:nth-of-type(3)
+                    animation-delay: 0.3s
+                &:nth-of-type(4)
+                    animation-delay: 0.4s
+                &:nth-of-type(5)
+                    animation-delay: 0.5s
+                &:nth-of-type(6)
+                    animation-delay: 0.6s
+                &:nth-of-type(7)
+                    animation-delay: 0.7s
+    .nav
+        margin-top: 17px
+        z-index: 101
+        overflow-y: scroll
+        overflow-x: hidden
+        width: 100%
+        height: 100%
+        &__list
+            flex-direction: column
+            padding: 0
+        &__item
+            position: relative
+            width: 100%
+            text-align: right
+            opacity: 0
+        &__item + &__item
+            margin-top: 17px
+            margin-left: 0
+        &__link
+            display: inline-block
+            padding: 0
+            font-size: 18px
+            font-weight: normal
+            line-height: 24px
+            white-space: nowrap
+            color: $white-color
+            &:hover
+                color: $white-color
+
+@media (min-width: 768px)
+    .hamburger
+        &--active
+            margin-right: 180px
+
+@media (max-width: 767px)
+    .header
+        &__language
+            margin: 0 auto
+    .overlay
+        padding: 90px 0 30px
+        width: 100%
+    .nav
+        margin-top: 36px
+        &__item
+            text-align: center
+        &__item + &__item
+            margin-top: 36px

@@ -1,0 +1,125 @@
+@import "config" // Always at the beginning
+@import "header"
+@import "footer"
+
+// offer
+.offer
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    padding-top: 133px
+    height: 100vh
+    background-blend-mode: multiply
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+    &__title
+        max-width: 835px
+        font-size: 60px
+        font-weight: 500
+    &__description
+        margin-top: 70px
+        max-width: 500px
+        font-size: 20px
+        color: $grey-color
+
+// dropdown
+.dropdown
+    position: relative
+    &__list
+        position: absolute
+        display: none
+        padding: 14px
+        background: $red-color
+        border-radius: 9px
+    &__link
+        font-size: 18px
+        font-weight: 500
+        line-height: 130%
+        &:hover
+            opacity: 0.5
+
+// icons
+.icons
+    &__list
+        display: flex
+        align-items: center
+    &__item + &__item
+        margin-left: 30px
+    &__link
+        &:hover
+            opacity: 0.7
+
+// about
+.about
+    margin-top: 66px
+    &__wrapper + &__wrapper
+        margin-top: 140px
+    &__title
+        font-size: 37px
+        font-weight: 300
+    &__inner
+        display: flex
+        justify-content: space-between
+        margin-top: 36px
+    &__description
+        font-size: 18px
+        font-weight: normal
+        line-height: 160%
+    &__right
+        margin-left: auto
+    &__img
+        overflow: hidden
+        width: 100%
+        border-radius: 24px
+    &__help
+        display: block
+        margin-top: 26px
+        font-size: 16px
+        color: $light-blue-color
+    &__btn
+        margin: 47px auto 0
+
+// join us
+.join-us
+    margin-top: 110px
+    &__title
+        margin-bottom: 55px
+        font-size: 46px
+        font-weight: 300
+    &__wrapper
+        display: flex
+        width: 100%
+    &__subtitle
+        font-size: 29px
+        font-weight: 300
+        line-height: 130%
+        color: $super-light-color
+    &__description
+        margin-top: 60px
+        font-size: 20px
+        font-weight: 300
+        line-height: 150%
+        color: $super-light-color
+
+.form-join
+    width: 100%
+    &__input
+        width: 100%
+    &__input + &__input,
+    &__input + &__inner,
+    &__inner + &__input
+        margin-top: 20px
+    &__inner
+        display: flex
+        align-items: center
+    &__select
+        &:last-child
+            margin-left: 20px
+    &__checkbox
+        margin-top: 20px
+    &__btn
+        margin-top: 30px
+
+@import "media" // Always at the end

@@ -1,0 +1,140 @@
+.footer
+    position: relative
+    padding: 70px 0 76px
+    background: $black-color
+    &::after
+        content: ''
+        position: absolute
+        top: -224px
+        right: 54px
+        z-index: -1
+        display: block
+        width: 325px
+        height: 380px
+        background-image: url(../img/dist/footer-bg.svg)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+    &__wrapper
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+    &__wrapper + &__wrapper
+        margin-top: 60px
+    &__inner
+        display: flex
+        &--center
+            align-items: center
+    &__inner:not(.footer__inner--center)
+        margin-top: 11px
+    &__list + &__list
+        margin-left: 22px
+    &__item
+        &:first-child
+            margin-bottom: 16px
+            .footer__link
+                font-size: 20px
+    &__link
+        font-size: 12px
+        font-weight: 300
+        &:hover
+            opacity: 0.7
+    &__title
+        font-size: 20px
+        font-weight: 300
+    &__title + .icons
+        margin-left: 40px
+    &__copyright
+        max-width: 489px
+        width: 100%
+
+// media
+@media (min-width: 1750px)
+    .footer
+        margin-top: 280px
+        &::after
+            right: 300px
+
+@media (max-width: 1749px)
+    .footer
+        &__inner
+            &--center
+                flex-direction: column
+                align-items: flex-start
+        &__inner:not(.footer__inner--center)
+            margin-top: 0
+        &__title + .icons
+            margin-top: 20px
+            margin-left: 0
+
+@media (min-width: 1280px) and (max-width: 1749px)
+    .footer
+        margin-top: 158px
+        &::after
+            right: 0
+
+@media (min-width: 1024px) and (max-width: 1279px)
+    .footer
+        margin-top: 142px
+        &__wrapper
+            flex-wrap: wrap
+        &__inner
+            width: 100%
+            justify-content: space-between
+        &__inner + &__inner
+            margin-top: 54px
+
+@media (max-width: 1023px)
+    .footer
+        &__inner
+            flex-wrap: wrap
+            width: 50%
+        &__list
+            width: 50%
+        &__list + &__list
+            margin-left: 0
+        &__item:not(:first-child)
+            display: none
+        &__item
+            &:first-child
+                .footer__link
+                    font-size: 19px
+        &__title
+            font-size: 19px
+
+@media (min-width: 768px) and (max-width: 1023px)
+    .footer
+        margin-top: 155px
+        &::after
+            right: 20px
+
+@media (max-width: 767px)
+    .footer
+        padding: 87px 0 43px
+        margin-top: 194px
+        &::after
+            top: -174px
+            right: 0
+            width: 250px
+            height: 294px
+        &__wrapper
+            flex-direction: column
+            margin-top: 53px
+        &__wrapper + &__wrapper
+            margin-top: 53px
+        &__inner
+            width: 100%
+            &--center
+                margin-top: 53px
+        &__item
+            &:first-child
+                .footer__link
+                    font-size: 17px
+        &__title
+            font-size: 17px
+        &__logotype
+            position: absolute
+            top: 35px
+            max-width: 190px
+        &__copyright
+            line-height: 132%
