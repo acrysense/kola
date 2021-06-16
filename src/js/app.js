@@ -34,4 +34,18 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.classList.add('scroll-disabled')
         }
     });
+    
+    // HEADER STICKY
+    const header = document.querySelector('.header')
+
+    if (header) {
+        window.addEventListener('scroll', () => {
+            console.log(window.pageYOffset)
+            if (window.pageYOffset > 0) {
+                header.classList.add('header--background')
+            } else {
+                header.classList.remove('header--background')
+            }
+        })
+    }
 });
