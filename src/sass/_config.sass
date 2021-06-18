@@ -31,6 +31,7 @@ li
 
 h1, h2, h3, h4, h5, h6
     margin: 0
+    font-weight: 300
 
 p
     margin: 0
@@ -61,7 +62,8 @@ svg path,
     display: block
     padding: 0
     width: 100%
-    padding: 24px
+    padding: 22px 42px
+    min-width: fit-content
     font-size: 24px
     font-weight: 500
     letter-spacing: 0.5em
@@ -100,10 +102,12 @@ svg path,
         background: rgba($white-color, 0.8)
         &::placeholder
             color: $dark-color
-    &--eror
+    &--error
         color: $orange-color
         background: rgba($white-color, 0.8)
         border: 3px solid $orange-color
+        &:hover
+            background: rgba($white-color, 0.8)
 
 .square-checkbox
     display: flex
@@ -143,67 +147,35 @@ svg path,
 .arrow-down
     display: block
     padding: 0
-    width: 24px
-    height: 24px
-    background-image: url(../img/dist/sprite.svg#icon-arrow-down)
+    width: 44px
+    height: 44px
+    background-image: url(../img/dist/sprite.svg#arrow-down)
     background-repeat: no-repeat
-    background-size: cover
+    background-size: 20px
     background-position: center center
     &:hover
         opacity: 0.7
 
-.ss-main .ss-single-selected
-    padding: 23px 24px
-    height: 100%
-    font-size: 20px
-    font-weight: normal
-    color: $super-light-color
-    background: rgba($white-color, 0.15)
-    border: 3px solid transparent
-    border-radius: 10px
-
-.ss-main .ss-single-selected .ss-arrow span
-    padding: 5px
-    border: solid rgba($white-color, 0.2)
-    border-width: 0 3px 3px 0
-
-.ss-main .ss-single-selected.ss-open-below,
-.ss-main .ss-single-selected.ss-open-above
-    border-radius: 10px
-
-.ss-main .ss-single-selected.ss-open-below + *
-    margin-top: 7px
-
-.ss-main .ss-single-selected.ss-open-above + *
-    margin-top: 20px
-
-.ss-content .ss-search
-    display: none
-
-.ss-content
-    color: $super-light-color
-    background: #526169
-    border: 0
-    border-radius: 10px
-
-.ss-content .ss-list
-    padding: 12px 0
-    max-height: 244px
-
-.ss-content .ss-list .ss-option
-    padding: 10px 24px
-    font-size: 20px
-    font-weight: 300
-    color: $super-light-color
-    transition: all 0.4s
-
-.ss-content .ss-list .ss-option.ss-disabled
-    display: none
-
-.ss-content .ss-list .ss-option:hover, .ss-content .ss-list .ss-option.ss-highlighted
-    opacity: 0.7
-    color: $super-light-color
-    background: none
+.go-to
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: 67px
+    &--margin
+        margin-top: 170px
+    &__arrow
+        display: flex
+        align-items: center
+        font-size: 25px
+        line-height: 150%
+        color: $red-color
+        & > span + svg,
+        & > svg + span
+            margin-left: 12px
+        &:hover
+            color: $orange-color
+            & > svg path
+                stroke: $orange-color
 
 // media
 @media (min-width: 1750px)
@@ -234,8 +206,24 @@ svg path,
     .container
         padding: 0 40px
         max-width: 100%
+    .go-to
+        &__arrow
+            font-size: 20px
+            & > svg
+                width: 24px
+                height: 24px
 
 @media (max-width: 767px)
     .container
         padding: 0 25px
+        max-width: 100%
+    .go-to
+        &__arrow
+            font-size: 16px
+            & > svg
+                width: 16px
+                height: 16px
+
+@media (max-width: 575px)
+    .btn
         max-width: 100%

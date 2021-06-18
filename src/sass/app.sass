@@ -1,4 +1,5 @@
 @import "config" // Always at the beginning
+@import "select"
 @import "header"
 @import "footer"
 
@@ -16,6 +17,8 @@
     background-repeat: no-repeat
     background-size: cover
     background-position: center center
+    &--start
+        justify-content: flex-start
     &__title
         max-width: 835px
         font-size: 60px
@@ -96,16 +99,15 @@
         margin-bottom: 55px
         font-size: 46px
         font-weight: 300
-    &__wrapper
-        display: flex
-        width: 100%
     &__subtitle
+        margin-bottom: 36px
         font-size: 29px
         font-weight: 300
         line-height: 130%
         color: $super-light-color
     &__description
-        margin-top: 60px
+        margin-top: 36px
+        max-width: 427px
         font-size: 20px
         font-weight: 300
         line-height: 150%
@@ -114,7 +116,15 @@
             color: $white-color
 
 .form-join
+    overflow: hidden
+    visibility: visible
+    max-width: 913px
+    max-height: 100vh
     width: 100%
+    transition: all 0.4s
+    &--hidden
+        visibility: hidden
+        max-height: 0
     &__input
         width: 100%
     &__input + &__input,
@@ -127,9 +137,237 @@
     &__select
         &:last-child
             margin-left: 20px
+    &__message
+        display: block
+        padding: 8px 24px
+        margin-top: 20px
+        color: $orange-color
     &__checkbox
         margin-top: 20px
     &__btn
         margin-top: 30px
+
+// contacts
+.contacts
+    display: flex
+    align-items: flex-start
+    flex-wrap: wrap
+    margin-top: 90px
+    &__wrapper
+        max-width: 491px
+        width: 100%
+        &:nth-child(2n)
+            margin-left: 85px
+    &__title
+        font-size: 30px
+        font-weight: 300
+        line-height: 190%
+    &__elem
+        display: block
+        font-size: 24px
+        font-weight: normal
+        line-height: 190%
+        a
+            display: inline
+
+// location
+.location
+    padding-top: 66px
+    &__wrapper
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+    &__content
+        width: 100%
+    &__title
+        font-size: 37px
+    &__description
+        margin-top: 36px
+        font-size: 18px
+        line-height: 160%
+    &__img
+        margin-top: 72px
+        max-width: 606px
+    &__inner
+        display: flex
+        align-items: center
+        justify-content: space-around
+        margin-top: 160px
+
+// rivers
+.rivers
+    padding-top: 133px
+    min-height: 1100px
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+    &__wrapper
+        margin-top: 100px
+        margin-left: auto
+        max-width: 513px
+        width: 100%
+    &__img
+        margin-bottom: 46px
+    &__title
+        font-size: 50px
+        font-weight: 500
+        color: $white-color
+    &__description
+        margin-top: 36px
+        font-size: 15px
+        line-height: 150%
+        color: $grey-color
+
+// content
+.content
+    padding-top: 190px
+    &__wrapper
+        & > h2
+            font-size: 60px
+            font-weight: 500
+        & > p
+            margin-top: 28px
+            max-width: 1125px
+            font-size: 24px
+            line-height: 190%
+        & > img
+            overflow: hidden
+            margin-top: 48px
+            width: 100%
+            border-radius: 24px
+
+// navigation blocks
+.navigation-blocks
+    display: flex
+    flex-wrap: wrap
+    margin: 80px 100px 0
+    &__item
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        padding: 46px 53px
+        width: 48%
+        min-height: 345px
+        font-size: 60px
+        font-weight: 500
+        text-align: right
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+        border-radius: 24px
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            display: block
+            width: 100%
+            height: 100%
+            border: 7px solid transparent
+            border-radius: 24px
+            transition: border 0.4s
+        &:hover
+            &::before
+                border: 7px solid $red-color
+        &:nth-child(2n)
+            margin-left: 4%
+        &:nth-child(n + 3)
+            margin-top: 4%
+
+// history
+.history
+    margin: 110px 120px 0
+    &__item
+        position: relative
+        display: flex
+        align-items: flex-start
+        &::before
+            content: ''
+            display: block
+            margin-right: 33px
+            min-width: 96px
+            min-height: 96px
+            max-width: 96px
+            max-height: 96px
+            background: #445D69
+            border-radius: 50%
+    &__item:not(:last-child)
+        &::after
+            content: ''
+            position: absolute
+            top: 0
+            left: 48px
+            display: block
+            width: 2px
+            height: calc(100% + 225px)
+            background: #445D69
+    &__item + &__item
+        margin-top: 225px
+    &__year
+        display: block
+        transform: translateY(-50%)
+        margin-top: 48px
+        font-size: 24px
+    &__description
+        margin-left: 83px
+        font-size: 20px
+        line-height: 190%
+
+// partners
+.partners
+    margin-top: 60px
+    &__item
+        display: flex
+        align-items: flex-start
+    &__item + &__item
+        margin-top: 90px
+    &__img
+        min-width: 104px
+        max-width: 104px
+    &__description
+        margin-left: 111px
+        font-size: 20px
+
+// team
+.team
+    margin-top: 90px
+    &__wrapper + &__wrapper
+        margin-top: 140px
+    &__title
+        margin-bottom: 68px
+        font-size: 37px
+        font-weight: 500
+    &__list
+        display: flex
+        flex-wrap: wrap
+    &__item
+        display: block
+        max-width: 215px
+        width: 100%
+        text-align: center
+        &:nth-child(4n),
+        &:nth-child(4n - 1),
+        &:nth-child(4n - 2)
+            margin-left: 150px
+        &:nth-child(n + 5)
+            margin-top: 90px
+    &__img
+        overflow: hidden
+        margin: 0 auto
+        max-width: 130px
+        min-width: 130px
+        border-radius: 50%
+    &__name
+        display: block
+        margin-top: 30px
+        font-size: 24px
+        font-weight: 500
+    &__position
+        display: block
+        margin-top: 20px
+        font-size: 18px
 
 @import "media" // Always at the end

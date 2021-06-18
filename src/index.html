@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kola Reserve - Главная</title>
+    <title>Kola Reserve - Home</title>
     <!-- Styles -->
     <link rel="stylesheet" href="css/vendor.min.css">
     <link rel="stylesheet" href="css/app.min.css">
@@ -145,37 +145,40 @@
     <section class="join-us">
         <div class="container">
             <h3 class="join-us__title">Stay tuned. <br>Our first fishing will take place in 2021 season</h3>
-            <div class="join-us__wrapper">
-                <form action="" class="form-join">
-                    <input type="text" class="form-join__input input" placeholder="Name">
-                    <input type="email" class="form-join__input input" placeholder="E-mail*">
-                    <div class="form-join__inner">
-                        <select class="form-join__select select" id="select1">
-                            <option value="0" disabled selected>Residence*</option>
-                            <option value="1">Residence 1</option>
-                        </select>
-                        <select class="form-join__select select" id="select2">
-                            <option value="0" disabled selected>Your role*</option>
-                            <option value="1">Student</option>
-                            <option value="2">Worker</option>
-                            <option value="3">Business owner</option>
-                            <option value="4">Fisherman</option>
-                            <option value="5">Other</option>
-                        </select>
-                    </div>
-                    <input type="text" class="form-join__input input" placeholder="How did you find us">
-                    <label for="already-been" class="square-checkbox form-join__checkbox">
-                        <input type="checkbox" class="square-checkbox__input" id="already-been">
-                        <span class="square-checkbox__icon"></span>
-                        <span class="square-checkbox__label">I’ve already been to Kola Peninsula</span>
-                    </label>
-                    <button class="form-join__btn btn">send</button>
-                </form>
-                <div class="join-us__block">
-                    <h4 class="join-us__subtitle">Fill out the form that we can contact you for early booking.</h4>
-                    <p class="join-us__description">If you have any questions please contact Gleb via <a href="mailto:gz@kola-reserve.com">gz@kola-reserve.com</a> or phone <a href="tel:+74954290914">+7 495 429 09 14</a>.</p>
+            <h4 class="join-us__subtitle">Fill out the form that we can contact you for early booking.</h4>
+            <a href="#" class="form-join__btn form-join__btn--details btn">Leave us your details</a>
+            <form action="" class="form-join form-join--hidden">
+                <input type="text" class="form-join__input input" placeholder="Name">
+                <input type="email" class="form-join__input input" placeholder="E-mail*">
+                <!-- If input error - added class input-error -->
+                <!--<input type="email" class="form-join__input input input--error" placeholder="E-mail*" value="dghjkdhj@askjdvh.wrgh">-->
+                <div class="form-join__inner">
+                    <select class="form-join__select select" id="select-residence">
+                        <option value="0" disabled selected>Residence*</option>
+                        <option value="1">Residence 1</option>
+                        <option value="2">Residence 2</option>
+                        <option value="3">Residence 3</option>
+                    </select>
+                    <select class="form-join__select select" id="select-role">
+                        <option value="0" disabled selected>Your role*</option>
+                        <option value="1">Student</option>
+                        <option value="2">Worker</option>
+                        <option value="3">Business owner</option>
+                        <option value="4">Fisherman</option>
+                        <option value="5">Other</option>
+                    </select>
                 </div>
-            </div>
+                <input type="text" class="form-join__input input" placeholder="How did you find us">
+                <!-- Error message -->
+                <!--<span class="form-join__message">Check that the information you entered is correct.</span>-->
+                <label for="already-been" class="square-checkbox form-join__checkbox">
+                    <input type="checkbox" class="square-checkbox__input" id="already-been">
+                    <span class="square-checkbox__icon"></span>
+                    <span class="square-checkbox__label">I’ve already been to Kola Peninsula</span>
+                </label>
+                <button class="form-join__btn btn">send</button>
+            </form>
+            <p class="join-us__description">If you have any questions please contact Gleb via <a href="mailto:gz@kola-reserve.com">gz@kola-reserve.com</a> or phone <a href="tel:+74954290914">+7 495 429 09 14</a>.</p>
         </div>
     </section>
     <!-- End of join us -->

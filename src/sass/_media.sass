@@ -5,10 +5,19 @@
             max-width: 700px
         &__img
             max-width: 583px
-    .join-us
-        &__block
-            margin-left: 40px
-            max-width: 431px
+    .location
+        &__content
+            max-width: 674px
+    .partners
+        margin-right: 120px
+        margin-left: 120px
+
+@media (max-width: 1749px)
+    .contacts
+        &__wrapper
+            max-width: 50%
+            &:nth-child(2n)
+                margin-left: 0
 
 @media (min-width: 1280px) and (max-width: 1749px)
     .about
@@ -16,23 +25,50 @@
             max-width: 555px
         &__img
             max-width: 518px
-    .join-us
-        &__block
-            margin-left: 49px
-            max-width: 363px
-
-@media (max-width: 1279px)
-    .join-us
-        &__wrapper
-            flex-direction: column-reverse
-        &__description
-            margin-top: 20px
-    .form-join
-        margin-top: 50px
+    .location
+        &__content
+            max-width: 494px
+        &__img
+            max-width: 528px
+    .history
+        &__item:not(:last-child)
+            &::after
+                height: calc(100% + 70px)
+        &__item + &__item
+            margin-top: 70px
+    .team
+        &__item
+            &:nth-child(4n),
+            &:nth-child(4n - 1),
+            &:nth-child(4n - 2)
+                margin-left: 88px
 
 @media (min-width: 1024px) and (max-width: 1749px)
     .about  
         margin-top: 50px
+    .contacts
+        &__title
+            font-size: 26px
+        &__elem
+            font-size: 22px
+    .navigation-blocks
+        margin: 80px 32px 0
+        &__item
+            min-height: 320px
+    .partners
+        margin-right: 60px
+        &__description
+            margin-left: 62px
+
+@media (max-width: 1279px)
+    .location
+        &__wrapper
+            flex-direction: column
+        &__content
+            max-width: 100%
+        &__img
+            margin: 0 auto
+            max-width: 100%
 
 @media (min-width: 1024px) and (max-width: 1279px)
     .offer
@@ -47,6 +83,37 @@
             max-width: 482px
         &__img
             max-width: 424px
+    .location
+        &__img
+            margin-top: 50px
+    .offer
+        &__title
+            font-size: 36px
+        &__description
+            margin-top: 32px
+            font-size: 18px
+    .content
+        padding-top: 150px
+        &__wrapper
+            & > h2
+                font-size: 36px
+            & > p
+                font-size: 18px
+            & > img
+                margin-top: 36px
+    .navigation-blocks
+        margin: 54px 50px 0
+        &__item
+            padding: 26px 38px
+            min-height: 240px
+            font-size: 36px
+    .team
+        &__item
+            max-width: 205px
+            &:nth-child(4n),
+            &:nth-child(4n - 1),
+            &:nth-child(4n - 2)
+                margin-left: 32px
     
 @media (min-width: 1024px)
     .dropdown
@@ -63,7 +130,7 @@
         &__description
             margin-top: 45px
             max-width: 354px
-            font-size: 15px
+            font-size: 16px
     .icons
         &__item + &__item
             margin-left: 24px
@@ -105,10 +172,182 @@
             &:last-child
                 margin-top: 20px
                 margin-left: 0
+    .partners
+        &__item
+            flex-direction: column
+        &__item + &__item
+            margin-top: 80px
+        &__img
+            max-width: 80px
+            min-width: 80px
+        &__description
+            margin-top: 40px
+            margin-left: 0
+            font-size: 14px
+
+@media (min-width: 768px) and (max-width: 1279px)
+    .history
+        margin: 68px 50px 0
+        &__item
+            &::before
+                margin-right: 16px
+                min-width: 62px
+                min-height: 62px
+                max-width: 62px
+                max-height: 62px
+        &__item:not(:last-child)
+            &::after
+                left: 31px
+                height: calc(100% + 60px)
+        &__item + &__item
+            margin-top: 60px
+        &__year
+            margin-top: 31px
+        &__description
+            margin-left: 36px
+    .team
+        margin-top: 80px
+        &__wrapper + &__wrapper
+            margin-top: 80px
+
+@media (min-width: 768px) and (max-width: 1023px)
+    .offer
+        &__title
+            font-size: 32px
+        &__description
+            margin-top: 20px
+            font-size: 16px
+    .contacts
+        &__title
+            font-size: 23px
+        &__elem
+            font-size: 18px
+    .location
+        &__img
+            margin-top: 36px
+    .navigation-blocks
+        margin: 54px 0 0
+        &__item
+            padding: 20px 32px
+            min-height: 200px
+            font-size: 36px
+    .history
+        &__year
+            font-size: 15px
+        &__description
+            font-size: 14px
+    .team
+        &__item
+            max-width: 150px
+            &:nth-child(4n),
+            &:nth-child(4n - 1),
+            &:nth-child(4n - 2)
+                margin-left: 22px
+        &__img
+            max-width: 90px
+            min-width: 90px
+        &__name
+            margin-top: 20px
+            font-size: 17px
+        &__position
+            margin-top: 14px
+            font-size: 13px
+
+@media (max-width: 767px)
+    .offer
+        &__title
+            font-size: 30px
+        &__description
+            margin-top: 22px
+            font-size: 14px
+    .contacts
+        flex-direction: column
+        &__wrapper
+            max-width: 100%
+        &__wrapper + &__wrapper
+            margin-top: 30px
+        &__title
+            font-size: 20px
+        &__elem
+            font-size: 16px
+    .location
+        &__img
+            margin-top: 32px
+    .rivers
+        &__title
+            font-size: 36px
+        &__description
+            font-size: 14px
+    .navigation-blocks
+        &__item
+            padding: 22px 30px
+            width: 100%
+            min-height: 200px
+            font-size: 32px
+            &:nth-child(2n)
+                margin-left: 0
+        &__item + &__item
+            margin-top: 20px
+    .history
+        margin: 68px 0 0
+        &__item
+            &::before
+                margin-right: 16px
+                min-width: 48px
+                min-height: 48px
+                max-width: 48px
+                max-height: 48px
+        &__item:not(:last-child)
+            &::after
+                left: 24px
+                height: calc(100% + 40px)
+        &__item + &__item
+            margin-top: 40px
+        &__year
+            margin-top: 24px
+            font-size: 15px
+        &__description
+            margin-left: 36px
+            font-size: 14px
+    .team
+        margin-top: 55px
+        &__wrapper + &__wrapper
+            margin-top: 90px
+        &__item
+            max-width: 50%
+            &:nth-child(4n),
+            &:nth-child(4n - 1),
+            &:nth-child(4n - 2)
+                margin-left: 0
+            &:nth-child(n + 3)
+                margin-top: 60px
+        &__img
+            max-width: 90px
+            min-width: 90px
+        &__name
+            margin-top: 20px
+            font-size: 17px
+        &__position
+            margin-top: 14px
+            font-size: 13px
 
 @media (min-width: 576px) and (max-width: 1023px)
     .about  
         margin-top: 36px
+    .content
+        padding-top: 120px
+        &__wrapper
+            & > h2
+                font-size: 32px
+            & > p
+                margin-top: 18px
+                font-size: 16px
+            & > img
+                margin-top: 36px
+
+@media (min-width: 576px) and (max-width: 767px)
+    .navigation-blocks
+        margin: 32px 40px 0
 
 @media (max-width: 575px)
     .logotype:not(.footer__logotype)
@@ -121,3 +360,19 @@
             max-width: 241px
     .about  
         margin-top: 30px
+    .form-join
+        &__btn
+            &--details
+                letter-spacing: 0.1em
+    .content
+        padding-top: 96px
+        &__wrapper
+            & > h2
+                font-size: 30px
+            & > p
+                margin-top: 22px
+                font-size: 14px
+            & > img
+                margin-top: 36px
+    .navigation-blocks
+        margin: 32px 0 0
