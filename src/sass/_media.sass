@@ -11,6 +11,14 @@
     .partners
         margin-right: 120px
         margin-left: 120px
+    .media
+        margin-top: 100px
+        margin-right: 100px
+        margin-left: 100px
+        &--md
+            .media__item
+                &:nth-child(n + 4)
+                    margin-top: 50px
 
 @media (max-width: 1749px)
     .contacts
@@ -42,6 +50,19 @@
             &:nth-child(4n - 1),
             &:nth-child(4n - 2)
                 margin-left: 88px
+    .media
+        margin-top: 68px
+        margin-right: 30px
+        margin-left: 30px
+        &--md
+            .media__item
+                &:nth-child(n + 4)
+                    margin-top: 48px
+        &__item
+            min-height: 220px
+        &__text
+            max-height: 52px
+            font-size: 22px
 
 @media (min-width: 1024px) and (max-width: 1749px)
     .about  
@@ -106,6 +127,8 @@
         &__item
             padding: 26px 38px
             min-height: 240px
+        &__text
+            max-height: 43px
             font-size: 36px
     .team
         &__item
@@ -114,12 +137,31 @@
             &:nth-child(4n - 1),
             &:nth-child(4n - 2)
                 margin-left: 32px
+    .media
+        margin-top: 46px
+        &--md
+            .media__item
+                &:nth-child(n + 4)
+                    margin-top: 42px
+        &__item
+            padding: 24px
+            min-height: 198px
+        &__text
+            max-height: 48px
+            font-size: 20px
     
 @media (min-width: 1024px)
     .dropdown
         &:hover
             .dropdown__list
                 display: block
+    .media
+        &--md
+            .media__item
+                width: 30%
+                &:nth-child(3n),
+                &:nth-child(3n - 1)
+                    margin-left: 5%
 
 @media (max-width: 1023px)
     .offer
@@ -230,6 +272,8 @@
         &__item
             padding: 20px 32px
             min-height: 200px
+        &__text
+            max-height: 43px
             font-size: 36px
     .history
         &__year
@@ -252,6 +296,21 @@
         &__position
             margin-top: 14px
             font-size: 13px
+    .media
+        margin-top: 46px
+        &--md
+            .media__item
+                width: 48%
+                &:nth-child(2n)
+                    margin-left: 4%
+                &:nth-child(n + 3)
+                    margin-top: 30px
+        &__item
+            padding: 24px
+            min-height: 228px
+        &__text
+            max-height: 52px
+            font-size: 22px
 
 @media (max-width: 767px)
     .offer
@@ -283,11 +342,13 @@
             padding: 22px 30px
             width: 100%
             min-height: 200px
-            font-size: 32px
             &:nth-child(2n)
                 margin-left: 0
         &__item + &__item
             margin-top: 20px
+        &__text
+            max-height: 38px
+            font-size: 32px
     .history
         margin: 68px 0 0
         &__item
@@ -330,6 +391,18 @@
         &__position
             margin-top: 14px
             font-size: 13px
+    .media
+        margin-top: 42px
+        &--md
+            .media__item
+                width: 100%
+            .media__item + .media__item
+                margin-top: 30px
+        &__item
+            padding: 24px
+        &__text
+            max-height: 52px
+            font-size: 22px
 
 @media (min-width: 576px) and (max-width: 1023px)
     .about  
