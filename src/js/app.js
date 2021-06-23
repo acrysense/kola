@@ -13,6 +13,27 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // HEIGHT RIVERS CONTENT
+    const riversContentMobile = document.querySelector('.rivers--mobile')
+
+    if (riversContentMobile) {
+        if (window.innerWidth > 1023) {
+            let heightRiversContent = riversContentMobile.clientHeight;
+            riversContentMobile.style.setProperty('margin-bottom', `-${heightRiversContent}px`);
+        } else {
+            riversContentMobile.style.setProperty('margin-bottom', `-${0}px`);
+        }
+        
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1023) {
+                let heightRiversContent = riversContentMobile.clientHeight;
+                riversContentMobile.style.setProperty('margin-bottom', `-${heightRiversContent}px`);
+            } else {
+                riversContentMobile.style.setProperty('margin-bottom', `-${0}px`);
+            }
+        });
+    }
+
     // SMOOTH SCROLL
     function currentYPosition() {
         // Firefox, Chrome, Opera, Safari
@@ -185,6 +206,74 @@ document.addEventListener('DOMContentLoaded', function () {
 
             slideUp(formJoinDetailsBtn, 250);
             formJoin.classList.remove('form-join--hidden')
+        })
+    }
+
+    // POPUP
+    const popupBtn = document.querySelectorAll('.popup-btn'),
+        popup = document.querySelectorAll('.popup'),
+        popupClose = document.querySelectorAll('.popup__close'),
+        popupOverlay = document.querySelector('.popup-overlay')
+    
+    if (popupBtn) {
+        popupBtn.forEach((item, i) => {
+            item.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                if (!popupOverlay.classList.contains('popup-overlay--active')) {
+                    popupOverlay.classList.add('popup-overlay--active')
+                }
+                document.body.classList.add('scroll-disabled');
+                popup[i].classList.add('popup--active');
+            });
+        });
+    }
+
+    document.body.addEventListener('keyup', (event) => {
+        let key = event.keyCode;
+
+        if (popup && popupOverlay.classList.contains('popup-overlay--active')) {
+            if (key == 27) {
+                document.body.classList.remove('scroll-disabled');
+                document.querySelectorAll('.popup.popup--active').forEach((child) => child.classList.remove('popup--active'));
+                document.querySelector('.popup-overlay').classList.remove('popup-overlay--active');
+            };
+        }
+    }, false);
+
+
+    if (popupOverlay) {
+        popupOverlay.addEventListener('click', () => {
+            if (popup && popupOverlay.classList.contains('popup-overlay--active')) {
+                document.body.classList.remove('scroll-disabled');
+                document.querySelectorAll('.popup.popup--active').forEach((child) => child.classList.remove('popup--active'));
+                document.querySelector('.popup-overlay').classList.remove('popup-overlay--active');
+            }
+        });
+    }
+
+    if (popupClose) {
+        popupClose.forEach((item) => {
+            item.addEventListener('click', () => {
+                document.body.classList.remove('scroll-disabled');
+                document.querySelectorAll('.popup.popup--active').forEach((child) => child.classList.remove('popup--active'));
+                popupOverlay.classList.remove('popup-overlay--active');
+            });
+        });
+    }
+
+    // TABS
+    const tabsItems = document.querySelectorAll('.tabs__item')
+
+    if (tabsItems) {
+        tabsItems.forEach((item, i) => {
+            item.addEventListener('click', () => {
+                document.querySelectorAll('.tabs__item').forEach((child) => child.classList.remove('tabs__item--active'))
+                document.querySelectorAll('.tabs__content').forEach((child) => child.classList.remove('tabs__content--active'))
+    
+                item.classList.add('tabs__item--active')
+                document.querySelectorAll('.tabs__content')[i].classList.add('tabs__content--active')
+            })
         })
     }
 });

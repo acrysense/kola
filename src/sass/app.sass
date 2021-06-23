@@ -2,6 +2,7 @@
 @import "select"
 @import "header"
 @import "footer"
+@import "popup"
 
 // offer
 .offer
@@ -196,19 +197,26 @@
 
 // rivers
 .rivers
+    position: relative
     padding-top: 133px
     min-height: 1100px
     background-repeat: no-repeat
     background-size: cover
     background-position: center center
-    &__wrapper
+    &--mobile
+        padding-top: 0
+        margin-top: 0
+        min-height: 100%
+    &__img
+        overflow: hidden
         margin-top: 100px
         margin-left: auto
         max-width: 513px
         width: 100%
-    &__img
-        margin-bottom: 46px
+        border-radius: 24px
+        box-shadow: 0px 13.028px 26.056px 8.68533px rgba(0, 0, 0, 0.25)
     &__title
+        max-width: 542px
         font-size: 50px
         font-weight: 500
         color: $white-color
@@ -217,6 +225,77 @@
         font-size: 15px
         line-height: 150%
         color: $grey-color
+    &__dot
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        z-index: 1
+        display: flex
+        align-items: flex-start
+        &:hover
+            & > svg
+                opacity: 1
+            & > span
+                opacity: 0
+        & > svg
+            opacity: 0
+            transition: opacity 0.4s
+        & > span
+            position: relative
+            display: block
+            font-size: 20px
+            transition: color 0.4s, opacity 0.4s
+            &::after
+                content: ''
+                position: absolute
+                top: 50%
+                left: -17px
+                transform: translate(-100%, -50%)
+                display: block
+                width: 12px
+                height: 12px
+                background: $super-light-color
+                border-radius: 50%
+                transition: background 0.4s
+            &::before
+                content: ''
+                position: absolute
+                top: 50%
+                left: -12px
+                transform: translate(-100%, -50%)
+                display: block
+                width: 22px
+                height: 22px
+                border: 1px solid $super-light-color
+                border-radius: 50%
+                transition: border 0.4s
+    &__dot
+        &--olenka
+            top: 225px
+            & > span
+                margin-left: 305px
+            &:hover
+                & > span
+                    color: $red-color
+                    opacity: 1
+                    &::after
+                        background: $red-color
+                    &::before
+                        border: 1px solid $red-color
+        &--lumbovka
+            top: 470px
+            & > svg
+                margin-left: 485px
+            & > span
+                margin-top: -5px
+                margin-left: 15px
+        &--kachkovka
+            top: 520px
+            & > svg
+                margin-left: 482px
+            & > span
+                margin-top: 15px
+                margin-left: -20px
 
 // content
 .content
@@ -436,5 +515,65 @@
         overflow: hidden
         font-size: 24px
         max-height: 56px
+
+// travel information
+.information
+    display: flex
+    align-items: flex-start
+    &__item + &__item
+        margin-top: 26px
+    &__link
+        font-size: 22px
+        font-weight: bold
+
+// tabs
+.tabs
+    &__inner,
+    &__list
+        display: flex
+        align-items: center
+    &__title
+        font-size: 60px
+        font-weight: 300
+    &__list
+        margin-left: 60px
+    &__item
+        &--active
+            .tabs__button
+                color: $red-color
+                border-bottom: 1px solid transparent
+    &__item + &__item
+        margin-left: 25px
+    &__button
+        display: block
+        padding: 0
+        font-size: 32px
+        font-weight: 500
+        color: $super-light-color
+        background: transparent
+        border: 0
+        border-bottom: 1px solid $super-light-color
+        transition: all 0.4s
+    &__content
+        display: none
+        margin-top: 48px
+        &--active
+            display: block
+    &__wrapper
+        display: flex
+        align-items: flex-start
+        & > svg
+            height: 100%
+        & > svg + p
+            margin-left: 116px
+        & > p
+            max-width: 446px
+            font-size: 20px
+            line-height: 150%
+    &__body
+        margin-top: 70px
+        & > p
+            font-size: 24px
+            line-height: 150%
 
 @import "media" // Always at the end

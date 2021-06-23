@@ -19,6 +19,17 @@
             .media__item
                 &:nth-child(n + 4)
                     margin-top: 50px
+    .information
+        margin-top: 84px
+        &__list
+            max-width: 445px
+        &__content
+            margin-left: 76px
+    .rivers
+        &__body
+            max-width: 513px
+        &__dot
+            width: 1380px
 
 @media (max-width: 1749px)
     .contacts
@@ -63,6 +74,32 @@
         &__text
             max-height: 52px
             font-size: 22px
+    .information
+        margin-top: 50px
+        &__list
+            max-width: 422px
+        &__content
+            margin-left: 56px
+    .tabs
+        &__wrapper
+            & > p
+                max-width: 313px
+    .rivers
+        &__body
+            max-width: 628px
+        &__dot
+            width: 1130px
+            &--olenka
+                top: 215px
+                & > span
+                    margin-left: 170px
+            &--lumbovka
+                & > svg
+                    margin-left: 355px
+            &--kachkovka
+                top: 520px
+                & > svg
+                    margin-left: 360px
 
 @media (min-width: 1024px) and (max-width: 1749px)
     .about  
@@ -149,6 +186,47 @@
         &__text
             max-height: 48px
             font-size: 20px
+    .information
+        margin-top: 50px
+        &__list
+            max-width: 345px
+        &__link
+            font-size: 18px
+        &__content
+            margin-left: 56px
+    .rivers
+        &__img
+            margin-left: auto
+            max-width: 462px
+        &__body
+            margin-bottom: 72px
+            max-width: 703px
+        &__dot
+            width: 950px
+            &--olenka
+                top: 225px
+                & > span
+                    margin-left: 95px
+            &--lumbovka
+                top: 470px
+                & > svg
+                    margin-left: 270px
+            &--kachkovka
+                top: 522px
+                & > svg
+                    margin-left: 268px
+    .tabs
+        &__wrapper
+            & > svg + p
+                margin-left: 70px
+            & > p
+                max-width: 333px
+        &__body
+            margin-top: 40px
+        &__wrapper,
+        &__body
+            & > p
+                font-size: 18px
     
 @media (min-width: 1024px)
     .dropdown
@@ -162,6 +240,9 @@
                 &:nth-child(3n),
                 &:nth-child(3n - 1)
                     margin-left: 5%
+    .rivers
+        &--mobile
+            transform: translateY(calc(-100% - 72px))
 
 @media (max-width: 1023px)
     .offer
@@ -226,6 +307,9 @@
             margin-top: 40px
             margin-left: 0
             font-size: 14px
+    .rivers
+        &--mobile
+            margin-top: 36px
 
 @media (min-width: 768px) and (max-width: 1279px)
     .history
@@ -282,11 +366,11 @@
             font-size: 14px
     .team
         &__item
-            max-width: 150px
+            max-width: 22%
             &:nth-child(4n),
             &:nth-child(4n - 1),
             &:nth-child(4n - 2)
-                margin-left: 22px
+                margin-left: 4%
         &__img
             max-width: 90px
             min-width: 90px
@@ -311,8 +395,56 @@
         &__text
             max-height: 52px
             font-size: 22px
+    .information
+        margin-top: 34px
+        &__list
+            max-width: 262px
+        &__link
+            font-size: 18px
+        &__content
+            margin-left: 28px
+    .rivers:not(.rivers--mobile)
+        padding-top: 220px
+        margin-top: 0
+        min-height: 850px
+    .rivers
+        background-position: center left 40%
+        &__wrapper
+        &__img
+            margin-left: auto
+            margin-top: -90px
+            margin-bottom: 0
+            max-width: 350px
+        &__dot
+            width: calc(100% - 80px)
+            &--olenka
+                top: 170px
+                & > span
+                    margin-left: 17%
+            &--lumbovka
+                top: 362px
+                & > svg
+                    margin-left: 32%
+            &--kachkovka
+                top: 400px
+                & > svg
+                    margin-left: 31%
+    .tabs
+        &__wrapper
+            & > svg + p
+                margin-left: 37px
+            & > p
+                max-width: 247px
+        &__body
+            margin-top: 30px
+        &__wrapper,
+        &__body
+            & > p
+                font-size: 15px
 
 @media (max-width: 767px)
+    .logotype:not(.footer__logotype)
+        max-width: 98px
     .offer
         &__title
             font-size: 30px
@@ -332,11 +464,26 @@
     .location
         &__img
             margin-top: 32px
+    .rivers:not(.rivers--mobile)
+        min-height: 520px
+        margin-top: 0
     .rivers
+        &--mobile
+            margin-top: 170px
+        &__img
+            position: absolute
+            left: 50%
+            bottom: -115px
+            transform: translateX(-50%)
+            margin: 0 auto
         &__title
             font-size: 36px
         &__description
             font-size: 14px
+        &__dot
+            width: calc(100% - 50px)
+            & > span
+                font-size: 14px
     .navigation-blocks
         &__item
             padding: 22px 30px
@@ -403,6 +550,41 @@
         &__text
             max-height: 52px
             font-size: 22px
+    .information
+        flex-direction: column
+        margin-top: 34px
+        &__link
+            font-size: 18px
+        &__content
+            margin-top: 26px
+    .tabs
+        &__inner
+            align-items: flex-start
+            flex-direction: column
+        &__list
+            margin-top: 21px
+            margin-left: 0
+        &__item + &__item
+            margin-left: 46px
+        &__button
+            font-size: 22px
+        &__content
+            margin-top: 26px
+        &__wrapper
+            flex-direction: column
+            & > svg
+                width: 100%
+                height: 100%
+            & > svg + p
+                margin-top: 26px
+                margin-left: 0
+                max-width: 100%
+        &__body
+            margin-top: 32px
+        &__wrapper,
+        &__body
+            & > p
+                font-size: 14px
 
 @media (min-width: 576px) and (max-width: 1023px)
     .about  
@@ -421,10 +603,22 @@
 @media (min-width: 576px) and (max-width: 767px)
     .navigation-blocks
         margin: 32px 40px 0
+    .rivers
+        &__dot
+            &--olenka
+                top: 105px
+                & > span
+                    margin-left: 18%
+            &--lumbovka
+                top: 230px
+                & > svg
+                    margin-left: 23%
+            &--kachkovka
+                top: 260px
+                & > svg
+                    margin-left: 19%
 
 @media (max-width: 575px)
-    .logotype:not(.footer__logotype)
-        max-width: 98px
     .offer
         justify-content: flex-start
         padding-top: 92px
@@ -449,3 +643,44 @@
                 margin-top: 36px
     .navigation-blocks
         margin: 32px 0 0
+    .rivers
+        background-position: center left 30%
+        &--mobile
+            margin-top: 150px
+        &__img
+            max-width: calc(100% - 50px)
+        &__dot
+            &--olenka
+                top: 100px
+                & > span
+                    margin-left: 18%
+                    &::after
+                        left: -10px
+                    &::before
+                        left: -5px
+            &--lumbovka
+                top: 225px
+                & > svg
+                    margin-left: -4%
+                & > span
+                    &::after
+                        left: auto
+                        right: -10px
+                        transform: translate(100%, -50%)
+                    &::before
+                        left: auto
+                        right: -5px
+                        transform: translate(100%, -50%)
+            &--kachkovka
+                top: 250px
+                & > svg
+                    margin-left: -9%
+                & > span
+                    &::after
+                        left: auto
+                        right: -10px
+                        transform: translate(100%, -50%)
+                    &::before
+                        left: auto
+                        right: -5px
+                        transform: translate(100%, -50%)
