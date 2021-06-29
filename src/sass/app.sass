@@ -1,6 +1,7 @@
 @import "config" // Always at the beginning
 @import "select"
 @import "header"
+@import "gallery"
 @import "footer"
 @import "popup"
 
@@ -20,6 +21,8 @@
     background-position: center center
     &--start
         justify-content: flex-start
+        height: auto
+        padding-bottom: 147px
     &__title
         max-width: 835px
         font-size: 60px
@@ -147,6 +150,8 @@
         margin-top: 20px
     &__btn
         margin-top: 30px
+        &--hidden
+            display: none
 
 // contacts
 .contacts
@@ -225,18 +230,34 @@
         font-size: 15px
         line-height: 150%
         color: $grey-color
-    &__dot
+    &__item
         position: absolute
         left: 50%
         transform: translateX(-50%)
         z-index: 1
+    &__item
+        &--olenka
+            top: 225px
+            & > .rivers__dot
+                margin-left: 305px
+        &--lumbovka
+            top: 470px
+            & > .rivers__dot
+                margin-left: 485px
+                span
+                    margin-top: -5px
+                    margin-left: 15px
+        &--kachkovka
+            top: 520px
+            & > .rivers__dot 
+                margin-left: 482px
+                span
+                    margin-top: 15px
+                    margin-left: -20px
+    &__dot
         display: flex
         align-items: flex-start
-        &:hover
-            & > svg
-                opacity: 1
-            & > span
-                opacity: 0
+        width: fit-content
         & > svg
             opacity: 0
             transition: opacity 0.4s
@@ -269,33 +290,6 @@
                 border: 1px solid $super-light-color
                 border-radius: 50%
                 transition: border 0.4s
-    &__dot
-        &--olenka
-            top: 225px
-            & > span
-                margin-left: 305px
-            &:hover
-                & > span
-                    color: $red-color
-                    opacity: 1
-                    &::after
-                        background: $red-color
-                    &::before
-                        border: 1px solid $red-color
-        &--lumbovka
-            top: 470px
-            & > svg
-                margin-left: 485px
-            & > span
-                margin-top: -5px
-                margin-left: 15px
-        &--kachkovka
-            top: 520px
-            & > svg
-                margin-left: 482px
-            & > span
-                margin-top: 15px
-                margin-left: -20px
 
 // content
 .content
@@ -358,7 +352,6 @@
             z-index: 0
             width: 100%
             height: 100%
-            opacity: 0
             background: linear-gradient(to top, #3E5D81 20.91%, rgba(255, 255, 255, 0) 89.2%)
             mix-blend-mode: multiply
             border-radius: 24px
@@ -366,8 +359,6 @@
         &:hover
             &::before
                 border: 7px solid $red-color
-            &::after
-                opacity: 1
         &:nth-child(2n)
             margin-left: 4%
         &:nth-child(n + 3)
@@ -562,12 +553,16 @@
     &__wrapper
         display: flex
         align-items: flex-start
-        & > svg
+        & > svg,
+        & > img
+            max-width: 700px
+            width: 100%
             height: 100%
-        & > svg + p
+        & > * + p
             margin-left: 116px
         & > p
             max-width: 446px
+            width: 100%
             font-size: 20px
             line-height: 150%
     &__body
@@ -575,5 +570,28 @@
         & > p
             font-size: 24px
             line-height: 150%
+
+// lodge
+.lodge-plan
+    & > svg
+        width: 100%
+        height: 100%
+    &__list
+        margin-top: 40px
+    &__item
+        display: flex
+        align-items: center
+        cursor: pointer
+    &__num,
+    &__text
+        display: block
+        font-size: 20px
+        line-height: 150%
+        white-space: nowrap
+    &__num
+        margin-right: 15px
+        max-width: 34px
+        width: 100%
+        color: $red-color
 
 @import "media" // Always at the end

@@ -276,4 +276,46 @@ document.addEventListener('DOMContentLoaded', function () {
             })
         })
     }
+
+    // SWIPER
+    const galleryThumb = document.querySelector('.gallery-thumbs')
+    const galleryMain = document.querySelector('.gallery-main')
+
+    let mySwiperThumb = new Swiper(galleryThumb, {
+        slidesPerView: 6,
+        spaceBetween: 8,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        observer: true,
+        observeParents: true,
+        breakpoints: {
+            0: {
+                slidesPerView: 4,
+            },
+            576: {
+                slidesPerView: 5,
+            },
+            768: {
+                slidesPerView: 4,
+            },
+            1024: {
+                slidesPerView: 5,
+            },
+            1280: {
+                slidesPerView: 6,
+            }
+        }
+    })
+    
+    let mySwiperMain = new Swiper(galleryMain, {
+        slidesPerView: 1,
+        loop: true,
+        loopedSlides: 6,
+        observer: true,
+        observeParents: true,
+        thumbs: {
+            swiper: mySwiperThumb,
+        },
+    })
 });

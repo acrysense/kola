@@ -1,0 +1,148 @@
+.gallery
+    width: 700px
+    .gallery-main
+        overflow: hidden
+        width: 100%
+        height: 437px
+        .swiper-slide img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    .gallery-thumbs
+        overflow: hidden
+        margin-top: 42px
+        width: 100%
+        height: 77px
+    .gallery-thumbs .swiper-slide
+        width: 108px
+        height: 77px
+        border: 1px solid transparent
+        cursor: pointer
+        transition: border 0.2s
+    .gallery-thumbs .swiper-slide-thumb-active
+        border: 1px solid $red-color
+    .swiper-img
+        position: relative
+        overflow: hidden
+        img
+            width: 108px
+            height: 75px
+            object-fit: cover
+
+.gallery
+    &--houses
+        .gallery-main
+            height: 700px
+        .gallery-thumbs
+            height: 110px
+        .gallery-thumbs .swiper-slide
+            height: 110px
+        .swiper-img
+            img
+                height: 108px
+
+// media
+@media (hover: hover)
+    .gallery-thumbs .swiper-slide
+        &:hover
+            border: 1px solid $red-color
+
+@media (min-width: 1024px) and (max-width: 1279px)
+    .gallery
+        width: 540px
+        .gallery-main
+            height: 336px
+        .gallery-thumbs
+            margin-top: 35px
+    .gallery
+        &--houses
+            .gallery-main
+                height: 540px
+            .gallery-thumbs
+                height: 101px
+            .gallery-thumbs .swiper-slide
+                height: 101px
+            .swiper-img
+                img
+                    height: 99px
+
+@media (min-width: 768px) and (max-width: 1023px)
+    .gallery
+        width: 404px
+        .gallery-main
+            height: 252px
+        .gallery-thumbs
+            margin-top: 32px
+            height: 65px
+        .gallery-thumbs .swiper-slide
+            width: 95px
+            height: 65px
+        .swiper-img
+            img
+                width: 95px
+                height: 63px
+    .gallery
+        &--houses
+            .gallery-main
+                height: 404px
+            .gallery-thumbs
+                height: 95px
+            .gallery-thumbs .swiper-slide
+                height: 95px
+            .swiper-img
+                img
+                    height: 93px
+
+@media (min-width: 576px) and (max-width: 767px)
+    .gallery
+        width: 100%
+        .gallery-main
+            height: 400px
+        .gallery-thumbs
+            margin-top: 24px
+            height: 66px
+        .gallery-thumbs .swiper-slide
+            width: 100%
+            height: 66px
+        .swiper-img
+            img
+                width: 100%
+                height: 64px
+    .gallery
+        &--houses
+            .gallery-main
+                height: auto
+            .gallery-thumbs
+                height: 98px
+            .gallery-thumbs .swiper-slide
+                height: 98px
+            .swiper-img
+                img
+                    height: 96px
+
+@media (max-width: 575px)
+    .gallery
+        width: 100%
+        .gallery-main
+            height: 210px
+        .gallery-thumbs
+            margin-top: 20px
+            height: 50px
+        .gallery-thumbs .swiper-slide
+            width: 100%
+            height: 50px
+        .swiper-img
+            img
+                width: 100%
+                height: 48px
+    .gallery
+        &--houses
+            .gallery-main
+                height: auto
+            .gallery-thumbs
+                height: 100%
+            .gallery-thumbs .swiper-slide
+                height: 100%
+            .swiper-img
+                img
+                    height: 100%

@@ -1,3 +1,17 @@
+@media (hover: hover)
+    .rivers
+        &__dot
+            &:hover
+                & > span
+                    color: $red-color
+                    opacity: 1
+                    &::after
+                        background: transparent
+                    &::before
+                        border: 1px solid transparent
+                & > svg
+                    opacity: 1
+
 @media (min-width: 1750px)
     .about
         margin-top: 66px
@@ -28,7 +42,7 @@
     .rivers
         &__body
             max-width: 513px
-        &__dot
+        &__item
             width: 1380px
 
 @media (max-width: 1749px)
@@ -87,18 +101,20 @@
     .rivers
         &__body
             max-width: 628px
-        &__dot
+        &__item
             width: 1130px
             &--olenka
                 top: 215px
-                & > span
+                & > .rivers__dot
                     margin-left: 170px
+                    span
+                        margin-left: 0
             &--lumbovka
-                & > svg
+                & > .rivers__dot
                     margin-left: 355px
             &--kachkovka
                 top: 520px
-                & > svg
+                & > .rivers__dot
                     margin-left: 360px
 
 @media (min-width: 1024px) and (max-width: 1749px)
@@ -130,6 +146,8 @@
 
 @media (min-width: 1024px) and (max-width: 1279px)
     .offer
+        &--start
+            padding-bottom: 100px
         &__title
             font-size: 48px
         &__description
@@ -201,23 +219,26 @@
         &__body
             margin-bottom: 72px
             max-width: 703px
-        &__dot
+        &__item
             width: 950px
             &--olenka
                 top: 225px
-                & > span
+                & > .rivers__dot
                     margin-left: 95px
             &--lumbovka
                 top: 470px
-                & > svg
+                & > .rivers__dot
                     margin-left: 270px
             &--kachkovka
                 top: 522px
-                & > svg
+                & > .rivers__dot
                     margin-left: 268px
     .tabs
         &__wrapper
-            & > svg + p
+            & > svg,
+            & > img
+                max-width: 540px
+            & > * + p
                 margin-left: 70px
             & > p
                 max-width: 333px
@@ -227,6 +248,12 @@
         &__body
             & > p
                 font-size: 18px
+    .lodge-plan
+        max-width: 540px
+        width: 100%
+        &__num,
+        &__text
+            font-size: 16px
     
 @media (min-width: 1024px)
     .dropdown
@@ -243,6 +270,18 @@
     .rivers
         &--mobile
             transform: translateY(calc(-100% - 72px))
+    .lodge-plan
+        &__list
+            display: flex
+            align-items: flex-start
+            flex-direction: column
+            flex-wrap: wrap
+            max-height: 130px
+            width: 100%
+        &__item
+            width: 65%
+            &:nth-child(n + 5)
+                width: 35%
 
 @media (max-width: 1023px)
     .offer
@@ -338,6 +377,8 @@
 
 @media (min-width: 768px) and (max-width: 1023px)
     .offer
+        &--start
+            padding-bottom: 86px
         &__title
             font-size: 32px
         &__description
@@ -415,23 +456,26 @@
             margin-top: -90px
             margin-bottom: 0
             max-width: 350px
-        &__dot
+        &__item
             width: calc(100% - 80px)
             &--olenka
                 top: 170px
-                & > span
+                & > .rivers__dot
                     margin-left: 17%
             &--lumbovka
                 top: 362px
-                & > svg
+                & > .rivers__dot
                     margin-left: 32%
             &--kachkovka
                 top: 400px
-                & > svg
+                & > .rivers__dot
                     margin-left: 31%
     .tabs
         &__wrapper
-            & > svg + p
+            & > svg,
+            & > img
+                max-width: 404px
+            & > * + p
                 margin-left: 37px
             & > p
                 max-width: 247px
@@ -441,11 +485,16 @@
         &__body
             & > p
                 font-size: 15px
+    .lodge-plan
+        max-width: 404px
+        width: 100%
 
 @media (max-width: 767px)
     .logotype:not(.footer__logotype)
         max-width: 98px
     .offer
+        &--start
+            padding-bottom: 120px
         &__title
             font-size: 30px
         &__description
@@ -480,9 +529,9 @@
             font-size: 36px
         &__description
             font-size: 14px
-        &__dot
+        &__item
             width: calc(100% - 50px)
-            & > span
+            & > .rivers__dot span
                 font-size: 14px
     .navigation-blocks
         &__item
@@ -569,13 +618,13 @@
         &__button
             font-size: 22px
         &__content
-            margin-top: 26px
+            margin-top: 34px
         &__wrapper
             flex-direction: column
             & > svg
                 width: 100%
                 height: 100%
-            & > svg + p
+            & > * + p
                 margin-top: 26px
                 margin-left: 0
                 max-width: 100%
@@ -585,6 +634,14 @@
         &__body
             & > p
                 font-size: 14px
+    .lodge-plan
+        &__num,
+        &__text
+            font-size: 16px
+            white-space: normal
+        &__num
+            margin-right: 12px
+            max-width: 28px
 
 @media (min-width: 576px) and (max-width: 1023px)
     .about  
@@ -604,18 +661,18 @@
     .navigation-blocks
         margin: 32px 40px 0
     .rivers
-        &__dot
+        &__item
             &--olenka
                 top: 105px
-                & > span
+                & > .rivers__dot
                     margin-left: 18%
             &--lumbovka
                 top: 230px
-                & > svg
+                & > .rivers__dot
                     margin-left: 23%
             &--kachkovka
                 top: 260px
-                & > svg
+                & > .rivers__dot
                     margin-left: 19%
 
 @media (max-width: 575px)
@@ -649,38 +706,39 @@
             margin-top: 150px
         &__img
             max-width: calc(100% - 50px)
-        &__dot
+        &__item
             &--olenka
                 top: 100px
-                & > span
+                & > .rivers__dot
                     margin-left: 18%
-                    &::after
-                        left: -10px
-                    &::before
-                        left: -5px
+                    span
+                        &::after
+                            left: -10px
+                        &::before
+                            left: -5px
             &--lumbovka
                 top: 225px
-                & > svg
+                & > .rivers__dot
                     margin-left: -4%
-                & > span
-                    &::after
-                        left: auto
-                        right: -10px
-                        transform: translate(100%, -50%)
-                    &::before
-                        left: auto
-                        right: -5px
-                        transform: translate(100%, -50%)
+                    span
+                        &::after
+                            left: auto
+                            right: -10px
+                            transform: translate(100%, -50%)
+                        &::before
+                            left: auto
+                            right: -5px
+                            transform: translate(100%, -50%)
             &--kachkovka
                 top: 250px
-                & > svg
+                & > .rivers__dot
                     margin-left: -9%
-                & > span
-                    &::after
-                        left: auto
-                        right: -10px
-                        transform: translate(100%, -50%)
-                    &::before
-                        left: auto
-                        right: -5px
-                        transform: translate(100%, -50%)
+                    span
+                        &::after
+                            left: auto
+                            right: -10px
+                            transform: translate(100%, -50%)
+                        &::before
+                            left: auto
+                            right: -5px
+                            transform: translate(100%, -50%)
