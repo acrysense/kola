@@ -21,6 +21,7 @@ let paths = {
             'node_modules/inputmask/dist/inputmask.min.js',
             'node_modules/swiper/swiper-bundle.min.js',
             'node_modules/slim-select/dist/slimselect.min.js',
+            'node_modules/@fancyapps/ui/dist/fancybox.umd.js',
         ],
         dest: baseDir + '/js',
     },

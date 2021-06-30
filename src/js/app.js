@@ -310,12 +310,54 @@ document.addEventListener('DOMContentLoaded', function () {
     
     let mySwiperMain = new Swiper(galleryMain, {
         slidesPerView: 1,
-        loop: true,
+        //loop: true,
         loopedSlides: 6,
         observer: true,
         observeParents: true,
         thumbs: {
             swiper: mySwiperThumb,
         },
+    })
+
+    // PLAN HOVER
+    const planItem = document.querySelectorAll('.lodge-plan__link')
+    const lodgeScheme = document.querySelectorAll('.lodge-scheme')
+    let schemeNum
+    let schemeNumTo
+
+    planItem.forEach((item, i) => {
+        item.addEventListener('mouseover', (event) => {
+            event.preventDefault()
+
+            schemeNum = '.scheme' + (i + 1)
+            document.querySelectorAll(schemeNum).forEach(child => child.style.fill = '#F93C00')
+            document.querySelectorAll(schemeNum).forEach(child => child.style.stroke = '#F93C00')
+        })
+        item.addEventListener('mouseout', (event) => {
+            event.preventDefault()
+            
+            schemeNum = '.scheme' + (i + 1)
+            document.querySelectorAll(schemeNum).forEach(child => child.style.fill = 'transparent')
+            document.querySelectorAll(schemeNum).forEach(child => child.style.stroke = '#B3CBE6')
+        })
+    })
+
+    lodgeScheme.forEach((item, i) => {
+        item.addEventListener('mouseover', (event) => {
+            event.preventDefault()
+
+            schemeNumTo = item.classList[1].slice(-1)
+            item.style.fill = '#F93C00'
+            item.style.stroke = '#F93C00'
+            document.querySelectorAll('.lodge-plan__link')[schemeNumTo - 1].style.color = '#F93C00'
+        })
+        item.addEventListener('mouseout', (event) => {
+            event.preventDefault()
+
+            schemeNumTo = item.classList[1].slice(-1)
+            item.style.fill = 'transparent'
+            item.style.stroke = '#B3CBE6'
+            document.querySelectorAll('.lodge-plan__link')[schemeNumTo - 1].style.color = 'inherit'
+        })
     })
 });
