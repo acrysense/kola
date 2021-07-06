@@ -474,6 +474,34 @@
             .media__text
                 max-height: 64px
                 font-size: 14px
+        &--leaderboard
+            counter-reset: leaderboard
+            .media__counter
+                &::before
+                    content: counter(leaderboard)
+                    counter-increment: leaderboard
+                    font-size: 152px
+                    font-weight: 900
+                    color: $red-color
+                &::after
+                    content: 'th'
+                    margin-left: 4px
+                    font-size: 50px
+                    font-weight: 900
+                    color: $red-color
+            .media__item
+                &:first-child
+                    .media__counter
+                        &::after
+                            content: 'st'
+                &:nth-child(2)
+                    .media__counter
+                        &::after
+                            content: 'nd'
+                &:nth-child(3)
+                    .media__counter
+                        &::after
+                            content: 'rd'
     &__item
         position: relative
         display: flex
@@ -486,6 +514,7 @@
         background-size: cover
         background-position: center center
         border-radius: 24px
+        transition: none
         &::before
             content: ''
             display: block
@@ -504,6 +533,22 @@
             &::before
                 background: linear-gradient(to top, #F93C00 0%, rgba(255, 255, 255, 0) 78.11%)
                 mix-blend-mode: normal
+            .media__counter
+                &::after,
+                &::before
+                    color: $white-color
+    &__content
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding: 30px
+        width: 100%
+        height: 100%
     &__text
         position: relative
         z-index: 1
@@ -515,16 +560,40 @@
         margin: 70px auto 0
         min-width: 698px
 
+.media-filter
+    display: flex
+    align-items: center
+    margin-bottom: 52px
+    &__select
+        margin-right: 42px
+        width: fit-content
+    &__clear
+        display: block
+        padding: 0
+        font-size: 24px
+        font-weight: 500
+        color: $super-light-color
+        background: transparent
+        border: 0
+        border-bottom: 1px solid $super-light-color
+    &__clear[disabled]
+        color: $light-color
+        border-bottom: 1px solid transparent
+
 // travel information
 .information
     display: flex
     align-items: flex-start
+    &__list
+        position: sticky
+        top: 140px
     &__item + &__item
         margin-top: 26px
     &__link
         font-size: 22px
         font-weight: bold
-    &__content
+    &__content,
+    &__mobile-content
         & > h4
             margin-bottom: 20px
             font-size: 20px
@@ -551,10 +620,12 @@
             line-height: 190%
         & > img
             overflow: hidden
-            margin: 48px auto
+            margin: 48px auto 0
             width: 100%
             text-align: center
             border-radius: 21px
+        & > img + *
+            margin-top: 48px
 
 // tabs
 .tabs

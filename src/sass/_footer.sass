@@ -51,7 +51,6 @@
 // media
 @media (min-width: 1750px)
     .footer
-        margin-top: 280px
         &::after
             right: 300px
 
@@ -69,13 +68,11 @@
 
 @media (min-width: 1280px) and (max-width: 1749px)
     .footer
-        margin-top: 158px
         &::after
             right: 0
 
 @media (min-width: 1024px) and (max-width: 1279px)
     .footer
-        margin-top: 142px
         &__wrapper
             flex-wrap: wrap
         &__inner
@@ -83,6 +80,10 @@
             justify-content: space-between
         &__inner + &__inner
             margin-top: 54px
+
+@media (min-width: 1024px)
+    .footer
+        margin-top: 142px
 
 @media (max-width: 1023px)
     .footer

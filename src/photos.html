@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kola Reserve - Photos</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <a href="index.html" class="logotype">
+                    <img src="img/dist/logotype.svg" alt="">
+                </a>
+                <div class="overlay">
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__item dropdown">
+                                <a href="rivers.html" class="nav__link">Rivers</a>
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item">
+                                        <a href="kachkovka.html" class="dropdown__link">Kachkovka </a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a href="lumbovka.html" class="dropdown__link">Lumbovka</a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a href="olenka.html" class="dropdown__link">Olenka</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav__item">
+                                <a href="lodge.html" class="nav__link">Lodge</a>
+                            </li>
+                            <li class="nav__item dropdown">
+                                <a href="fishing.html" class="nav__link">Fishing</a>
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item">
+                                        <a href="report.html" class="dropdown__link">Report</a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a href="leadership.html" class="dropdown__link">Leadership</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav__item dropdown">
+                                <a href="about.html" class="nav__link">About us</a>
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item">
+                                        <a href="team.html" class="dropdown__link">Team</a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a href="story.html" class="dropdown__link">Story</a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a href="partnership.html" class="dropdown__link">Partnership</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav__item nav__item--active dropdown">
+                                <a href="gallery.html" class="nav__link">Gallery</a>
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__item">
+                                        <a href="photos.html" class="dropdown__link">Photos</a>
+                                    </li>
+                                    <li class="dropdown__item">
+                                        <a href="videos.html" class="dropdown__link">Videos</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav__item">
+                                <a href="travel-info.html" class="nav__link">Travel info</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="contacts.html" class="nav__link">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a href="#" class="header__language">RUS</a>
+                </div>
+                <button class="hamburger" id="hamburger-toggle" aria-label="Меню">
+                    <span class="hamburger__inner"></span>
+                    <span class="hamburger__inner"></span>
+                    <span class="hamburger__inner"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- End of header -->
+    <!-- History -->
+    <section class="content" id="content">
+        <div class="container">
+            <div class="content__wrapper">
+                <h2>Photos</h2>
+            </div>
+            <div class="media">
+                <div class="media-filter">
+                    <select class="media-filter__select select" id="select-year">
+                        <option value="0" disabled selected>Year</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                    </select>
+                    <select class="media-filter__select select" id="select-week">
+                        <option value="0" disabled selected>Week</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                    </select>
+                    <select class="media-filter__select select" id="select-river">
+                        <option value="0" disabled selected>River</option>
+                        <option value="kachkovka">Kachkovka</option>
+                        <option value="lumbovka">Lumbovka</option>
+                        <option value="olenka">Olenka</option>
+                    </select>
+                    <button class="media-filter__clear" disabled>Сбросить</button>
+                </div>
+                <div class="media__wrapper media__wrapper--sm">
+                    <a href="#" class="media__item" style="background-image: url(img/dist/partners-img.png);">
+                        <span class="media__text">Ловля на Качковке, название в три строки</span>
+                    </a>
+                    <a href="#" class="media__item" style="background-image: url(img/dist/partners-img.png);">
+                        <span class="media__text">Название в две строки</span>
+                    </a>
+                    <a href="#" class="media__item" style="background-image: url(img/dist/partners-img.png);">
+                        <span class="media__text">В одну строку</span>
+                    </a>
+                    <a href="#" class="media__item" style="background-image: url(img/dist/partners-img.png);">
+                        <span class="media__text">Ловля на Качковке, название в две строки и еще в две строки - максималка</span>
+                    </a>
+                    <a href="#" class="media__item" style="background-image: url(img/dist/partners-img.png);">
+                        <span class="media__text">People</span>
+                    </a>
+                    <a href="#" class="media__item" style="background-image: url(img/dist/partners-img.png);">
+                        <span class="media__text">People</span>
+                    </a>
+                    <a href="#" class="media__item" style="background-image: url(img/dist/partners-img.png);">
+                        <span class="media__text">People</span>
+                    </a>
+                    <a href="#" class="media__item" style="background-image: url(img/dist/partners-img.png);">
+                        <span class="media__text">People</span>
+                    </a>
+                    <a href="#" class="media__item" style="background-image: url(img/dist/partners-img.png);">
+                        <span class="media__text">People</span>
+                    </a>
+                    <a href="#" class="media__item" style="background-image: url(img/dist/partners-img.png);">
+                        <span class="media__text">People</span>
+                    </a>
+                    <a href="#" class="media__item" style="background-image: url(img/dist/partners-img.png);">
+                        <span class="media__text">People</span>
+                    </a>
+                    <a href="#" class="media__item" style="background-image: url(img/dist/partners-img.png);">
+                        <span class="media__text">People</span>
+                    </a>
+                </div>
+                <a href="#" class="media__btn btn">download more</a>
+            </div>
+        </div>
+    </section>
+    <!-- End of history -->
+    <!-- Join us -->
+    <section class="join-us">
+        <div class="container">
+            <h3 class="join-us__title">Stay tuned. <br>Our first fishing will take place in 2021 season</h3>
+            <h4 class="join-us__subtitle">Fill out the form that we can contact you for early booking.</h4>
+            <a href="#" class="form-join__btn form-join__btn--details btn">Leave us your details</a>
+            <form action="" class="form-join form-join--hidden">
+                <input type="text" class="form-join__input input" placeholder="Name">
+                <input type="email" class="form-join__input input" placeholder="E-mail*">
+                <!-- If input error - added class input-error -->
+                <!--<input type="email" class="form-join__input input input--error" placeholder="E-mail*" value="dghjkdhj@askjdvh.wrgh">-->
+                <div class="form-join__inner">
+                    <select class="form-join__select select" id="select-residence">
+                        <option value="0" disabled selected>Residence*</option>
+                        <option value="1">Residence 1</option>
+                        <option value="2">Residence 2</option>
+                        <option value="3">Residence 3</option>
+                    </select>
+                    <select class="form-join__select select" id="select-role">
+                        <option value="0" disabled selected>Your role*</option>
+                        <option value="1">Student</option>
+                        <option value="2">Worker</option>
+                        <option value="3">Business owner</option>
+                        <option value="4">Fisherman</option>
+                        <option value="5">Other</option>
+                    </select>
+                </div>
+                <input type="text" class="form-join__input input" placeholder="How did you find us">
+                <!-- Error message -->
+                <!--<span class="form-join__message">Check that the information you entered is correct.</span>-->
+                <label for="already-been" class="square-checkbox form-join__checkbox">
+                    <input type="checkbox" class="square-checkbox__input" id="already-been">
+                    <span class="square-checkbox__icon"></span>
+                    <span class="square-checkbox__label">I’ve already been to Kola Peninsula</span>
+                </label>
+                <button class="form-join__btn btn">send</button>
+            </form>
+            <p class="join-us__description">If you have any questions please contact Gleb via <a href="mailto:gz@kola-reserve.com">gz@kola-reserve.com</a> or phone <a href="tel:+74954290914">+7 495 429 09 14</a>.</p>
+        </div>
+    </section>
+    <!-- End of join us -->
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__inner">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="rivers.html" class="footer__link">Rivers</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="lumbovka.html" class="footer__link">Lumbovka</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="kachovka.html" class="footer__link">Kachovka</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="olenka.html" class="footer__link">Olenka</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="lodge.html" class="footer__link">Lodge</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="fishing.html" class="footer__link">Fishing</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="report.html" class="footer__link">Report</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="leadership.html" class="footer__link">Leadership</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="about.html" class="footer__link">About us</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="team.html" class="footer__link">Team</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="story.html" class="footer__link">Story</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="partnership.html" class="footer__link">Partnership</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="gallery.html" class="footer__link">Gallery</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="photos.html" class="footer__link">Photos</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="videos.html" class="footer__link">Videos</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="travel-info.html" class="footer__link">Travel info</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="contacts.html" class="footer__link">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__inner footer__inner--center">
+                    <h3 class="footer__title">Follow us to get the latest updates:</h3>
+                    <div class="icons">
+                        <ul class="icons__list">
+                            <li class="icons__item">
+                                <a href="#" class="icons__link" aria-label="Facebook">
+                                    <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M46.3452 8.33896C46.3452 4.25674 42.7433 0.654785 38.661 0.654785H7.68417C3.60195 0.654785 0 4.25674 0 8.33896V39.3158C0 43.398 3.60195 47 7.68417 47H23.2927V29.4705H17.5295V21.7863H23.2927V18.6646C23.2927 13.3817 27.1348 8.81921 31.9374 8.81921H38.1808V16.5034H31.9374C31.217 16.5034 30.4966 17.2238 30.4966 18.6646V21.7863H38.1808V29.4705H30.4966V47H38.661C42.7433 47 46.3452 43.398 46.3452 39.3158V8.33896Z" fill="#6A828E"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="icons__item">
+                                <a href="#" class="icons__link" aria-label="Instagram">
+                                    <svg width="48" height="47" viewBox="0 0 48 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M40.7328 0H7.57819C3.83492 0 0.98291 2.85202 0.98291 6.59528V39.7499C0.98291 43.4932 3.83492 46.3452 7.57819 46.3452H40.7328C44.4761 46.3452 47.3281 43.4932 47.3281 39.7499V6.59528C47.3281 2.85202 44.4761 0 40.7328 0ZM24.1555 37.0762C31.8203 37.0762 38.0591 31.0156 38.0591 23.7074C38.0591 22.4596 37.8808 21.0336 37.5243 19.9641H41.4458V38.8587C41.4458 39.7499 40.7328 40.6412 39.6633 40.6412H8.6477C7.75645 40.6412 6.86519 39.9282 6.86519 38.8587V19.7858H10.965C10.6085 21.0336 10.4302 22.2814 10.4302 23.5291C10.252 31.0156 16.4907 37.0762 24.1555 37.0762ZM24.1555 31.7286C19.1645 31.7286 15.243 27.8071 15.243 22.9944C15.243 18.1816 19.1645 14.2601 24.1555 14.2601C29.1465 14.2601 33.0681 18.1816 33.0681 22.9944C33.0681 27.9854 29.1465 31.7286 24.1555 31.7286ZM41.2676 12.6558C41.2676 13.7253 40.3763 14.6166 39.3068 14.6166H34.3158C33.2463 14.6166 32.3551 13.7253 32.3551 12.6558V7.84304C32.3551 6.77353 33.2463 5.88228 34.3158 5.88228H39.3068C40.3763 5.88228 41.2676 6.77353 41.2676 7.84304V12.6558Z" fill="#6A828E"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__wrapper">
+                <a href="index.html" class="logotype footer__logotype">
+                    <img src="img/dist/logotype.svg" alt="">
+                </a>
+                <p class="footer__copyright">
+                    The information in this website is updated every week.<br>
+                    All fights reserved. Website is made by Sitebuilders in 2021.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- End of footer -->
+    <!-- Scripts -->
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+</html>

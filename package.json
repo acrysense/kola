@@ -25,6 +25,7 @@
 		"gulp-svg-sprite": "^1.5.0",
 		"gulp-uglify-es": "^2.0.0",
 		"inputmask": "^5.0.5",
+		"simplebar": "^5.3.4",
 		"slim-select": "^1.27.0",
 		"swiper": "^6.5.0"
 	},

@@ -149,12 +149,37 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // SLIM SELECT
-    new SlimSelect({
-        select: '#select-residence'
-    });
-    new SlimSelect({
-        select: '#select-role'
-    });
+    const selectResidence = document.getElementById('select-residence')
+    const selectRole = document.getElementById('select-role')
+    const selectYear = document.getElementById('select-year')
+    const selectWeek = document.getElementById('select-week')
+    const selectRiver = document.getElementById('select-river')
+
+    if (selectResidence) {
+        new SlimSelect({
+            select: '#select-residence',
+        });
+    }
+    if (selectRole) {
+        new SlimSelect({
+            select: '#select-role'
+        });
+    }
+    if (selectYear) {
+        new SlimSelect({
+            select: '#select-year'
+        });
+    }
+    if (selectWeek) {
+        new SlimSelect({
+            select: '#select-week'
+        });
+    }
+    if (selectRiver) {
+        new SlimSelect({
+            select: '#select-river'
+        });
+    }
     
     // MOBILE MENU
     const hamburger = document.getElementById('hamburger-toggle')
@@ -185,14 +210,18 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
-    // SCROLL TO NEXT SECTION
-    const offerArrowDown = document.querySelector('.offer__arrow-down')
+    // SMOOTH SCROLL
+    const allLinks = document.querySelectorAll('a[href^="#"]')
 
-    if (offerArrowDown) {
-        offerArrowDown.addEventListener('click', (event) => {
-            event.preventDefault()
-    
-            smoothScroll('about')
+    if (allLinks) {
+        allLinks.forEach(item => {
+            item.addEventListener('click', (event) => {
+                event.preventDefault()
+        
+                if (item.getAttribute('href').length > 1) {
+                    smoothScroll(item.getAttribute('href').slice(1))
+                }
+            })
         })
     }
 
@@ -232,13 +261,13 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.addEventListener('keyup', (event) => {
         let key = event.keyCode;
 
-        if (popup && popupOverlay.classList.contains('popup-overlay--active')) {
-            if (key == 27) {
+        if (key == 27) {
+            if (popup && popupOverlay.classList.contains('popup-overlay--active')) {
                 document.body.classList.remove('scroll-disabled');
                 document.querySelectorAll('.popup.popup--active').forEach((child) => child.classList.remove('popup--active'));
                 document.querySelector('.popup-overlay').classList.remove('popup-overlay--active');
-            };
-        }
+            }
+        };
     }, false);
 
 
@@ -310,13 +339,33 @@ document.addEventListener('DOMContentLoaded', function () {
     
     let mySwiperMain = new Swiper(galleryMain, {
         slidesPerView: 1,
-        //loop: true,
         loopedSlides: 6,
         observer: true,
         observeParents: true,
+        navigation: {
+            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next'
+        },
         thumbs: {
             swiper: mySwiperThumb,
         },
+        breakpoints: {
+            0: {
+                thumbs: {
+                    autoScrollOffset: 1,
+                },
+            },
+            1024: {
+                thumbs: {
+                    autoScrollOffset: 2,
+                },
+            },
+            1280: {
+                thumbs: {
+                    autoScrollOffset: 3,
+                },
+            }
+        }
     })
 
     // PLAN HOVER
@@ -360,4 +409,69 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('.lodge-plan__link')[schemeNumTo - 1].style.color = 'inherit'
         })
     })
+
+    // INFORMATION ACCORDION
+    const informationTrigger = document.querySelectorAll('.information__trigger')
+
+    if (informationTrigger) {
+        informationTrigger.forEach(item => { item.parentNode.style.setProperty('max-height', `${item.clientHeight}px`) })
+
+        informationTrigger.forEach(item => {
+            item.addEventListener('click', (event) => {
+                event.preventDefault()
+                
+                let heightInformationTrigger = item.clientHeight;
+                let heightInformationContent = item.nextElementSibling.clientHeight;
+                if (!item.parentNode.classList.contains('information__mobile-item--active')) {
+                    informationTrigger.forEach(item => {
+                        item.parentNode.style.setProperty('max-height', `${item.clientHeight}px`)
+                        item.parentNode.classList.remove('information__mobile-item--active')
+                    })
+
+                    item.parentNode.classList.add('information__mobile-item--active')
+                    item.parentNode.style.setProperty('max-height', `${heightInformationContent}px`)
+                } else {
+                    item.parentNode.classList.remove('information__mobile-item--active')
+                    item.parentNode.style.setProperty('max-height', `${heightInformationTrigger}px`)
+                }
+            })
+        })
+    }
+
+    // FANCYBOX
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        //loop: true,
+        //arrows: false,
+        //infobar: false,
+        //margin: [44,0,22,0],
+        //thumbs : {
+        //    autoStart : true,
+        //    axis : 'x'
+        //}
+    
+        animated: false,
+        dragToClose: false,
+        showClass: false,
+        hideClass: false,
+        closeButton: "top",
+
+        Image: {
+            click: "close",
+            wheel: "slide",
+            zoom: false,
+        },
+
+        thumbs: {
+            autoStart: true,
+            axis: 'x'
+        }
+
+        //Thumbs: {
+        //    Carousel: {
+        //      center: function () {
+        //        return this.elemDimWidth > this.wrapDimWidth;
+        //      },
+        //    },
+        //},
+    });
 });

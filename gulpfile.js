@@ -22,6 +22,7 @@ let paths = {
             'node_modules/swiper/swiper-bundle.min.js',
             'node_modules/slim-select/dist/slimselect.min.js',
             'node_modules/@fancyapps/ui/dist/fancybox.umd.js',
+            'node_modules/simplebar/dist/simplebar.min.js',
         ],
         dest: baseDir + '/js',
     },

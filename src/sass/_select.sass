@@ -1,63 +1,182 @@
-.ss-main .ss-single-selected
-    padding: 23px 24px
-    height: 100%
-    font-size: 20px
-    font-weight: normal
-    color: $super-light-color
-    background: rgba($white-color, 0.15)
-    border: 3px solid transparent
-    border-radius: 10px
+.join-us
+    .ss-main .ss-single-selected
+        padding: 23px 24px
+        height: 100%
+        font-size: 20px
+        font-weight: normal
+        color: $super-light-color
+        background: rgba($white-color, 0.15)
+        border: 3px solid transparent
+        border-radius: 10px
 
-.ss-main .ss-single-selected .ss-arrow span
-    padding: 5px
-    border: solid rgba($white-color, 0.2)
-    border-width: 0 3px 3px 0
+    .ss-main .ss-single-selected .ss-arrow span
+        padding: 5px
+        border: solid rgba($white-color, 0.2)
+        border-width: 0 3px 3px 0
 
-.ss-main .ss-single-selected.ss-open-below,
-.ss-main .ss-single-selected.ss-open-above
-    border-radius: 10px
+    .ss-main .ss-single-selected.ss-open-below,
+    .ss-main .ss-single-selected.ss-open-above
+        border-radius: 10px
 
-.ss-main .ss-single-selected.ss-open-below + *
-    margin-top: 7px
+    .ss-main .ss-single-selected.ss-open-below + *
+        margin-top: 7px
 
-.ss-main .ss-single-selected.ss-open-above + *
-    transform: scale(1) translateY(-7px)
+    .ss-main .ss-single-selected.ss-open-above + *
+        transform: scale(1) translateY(-7px)
 
-.ss-content .ss-search
-    display: none
+    .ss-content .ss-search
+        display: none
 
-.ss-content
-    z-index: 99!important
-    color: $super-light-color
-    background: #526169
-    border: 0
-    border-radius: 10px
+    .ss-content
+        z-index: 99!important
+        color: $super-light-color
+        background: #526169
+        border: 0
+        border-radius: 10px
 
-.ss-content .ss-list
-    padding: 12px 0
-    max-height: 244px
+    .ss-content .ss-list
+        padding: 12px 0
+        max-height: 244px
 
-.ss-content .ss-list .ss-option
-    padding: 10px 24px
-    font-size: 20px
-    font-weight: 300
-    color: $super-light-color
-    transition: all 0.4s
+    .ss-content .ss-list .ss-option
+        padding: 10px 24px
+        font-size: 20px
+        font-weight: 300
+        color: $super-light-color
+        transition: all 0.4s
 
-.ss-content .ss-list .ss-option.ss-disabled:not(.ss-option-selected)
-    display: none
+    .ss-content .ss-list .ss-option.ss-disabled:not(.ss-option-selected)
+        display: none
 
-.ss-content .ss-list .ss-option.ss-disabled
-    color: inherit
-    background: none
-    cursor: pointer
+    .ss-content .ss-list .ss-option.ss-disabled
+        color: inherit
+        background: none
+        cursor: pointer
 
-.ss-content .ss-list .ss-option:hover, .ss-content .ss-list .ss-option.ss-highlighted
-    opacity: 0.7
-    color: $super-light-color
-    background: none
+    .ss-content .ss-list .ss-option:hover, .ss-content .ss-list .ss-option.ss-highlighted
+        opacity: 0.7
+        color: $super-light-color
+        background: none
 
-.ss-arrow .arrow-down
-    width: auto
-    height: auto
-    background: none
+    .ss-arrow .arrow-down
+        width: auto
+        height: auto
+        background: none
+
+.media-filter
+    .ss-main .ss-single-selected
+        padding: 0
+        width: fit-content
+        height: 100%
+        font-size: 24px
+        font-weight: 500
+        color: $super-light-color
+        background: transparent
+        border: none
+        border-radius: 0
+
+    .ss-main .ss-single-selected .ss-arrow
+        margin: 0 0 0 8px
+    
+    .ss-main .ss-single-selected .ss-arrow span
+        padding: 0
+        margin: 0
+        width: 20px
+        height: 20px
+        background-image: url(../img/dist/sprite.svg#icon-caret-red)
+        background-repeat: no-repeat
+        background-size: 16px
+        background-position: bottom center
+        border: 0
+        transform: none
+        transition: all 0.4s
+
+    .ss-main .ss-single-selected .ss-arrow .arrow-up
+        transform: rotate(180deg)
+
+    .ss-main .ss-single-selected.ss-open-below,
+    .ss-main .ss-single-selected.ss-open-above
+        border-radius: 10px
+
+    .ss-main .ss-single-selected.ss-open-below + *
+        margin-top: 7px
+
+    .ss-main .ss-single-selected.ss-open-above + *
+        transform: scale(1) translateY(-7px)
+
+    .ss-content .ss-search
+        display: none
+
+    .ss-content
+        z-index: 99!important
+        width: fit-content
+        color: $white-color
+        background: $red-color
+        border: 0
+        border-radius: 9px
+
+    .ss-content .ss-list
+        padding: 5px 10px
+        max-height: 298px
+        &::-webkit-scrollbar
+            width: 24px
+        &::-webkit-scrollbar-track
+            background-color: transparent
+        &::-webkit-scrollbar-thumb
+            border: 8px solid transparent
+            background-clip: padding-box
+            border-radius: 999px
+            background-color: $dark-color
+
+    .ss-content .ss-list .ss-option
+        padding: 0
+        font-size: 20px
+        font-weight: 500
+        line-height: 180%
+        color: $white-color
+        transition: all 0.4s
+
+    .ss-content .ss-list .ss-option.ss-disabled:not(.ss-option-selected)
+        display: none
+
+    .ss-option:first-child.ss-disabled.ss-option-selected
+        display: none
+    
+    .ss-content .ss-list .ss-option.ss-disabled
+        color: $dark-color
+        background: none
+        cursor: pointer
+
+    .ss-content .ss-list .ss-option:hover, .ss-content .ss-list .ss-option.ss-highlighted
+        color: $dark-color
+        background: none
+
+    .ss-arrow .arrow-down
+        width: auto
+        height: auto
+        background: none
+
+// media
+@media (min-width: 768px) and (max-width: 1023px)
+    .media-filter
+        .ss-main .ss-single-selected
+            font-size: 22px
+
+@media (max-width: 767px)
+    .media-filter
+        .ss-main .ss-single-selected
+            font-size: 20px
+        .ss-main .ss-single-selected .ss-arrow span
+            width: 16px
+            height: 16px
+            background-size: 14px
+        .ss-content .ss-list
+            max-height: 266px
+        .ss-content .ss-list .ss-option
+            padding: 0
+            font-size: 18px
+
+@media (max-width: 374px)
+    .media-filter
+        .ss-content
+            margin-left: -12px
