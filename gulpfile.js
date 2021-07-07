@@ -12,6 +12,10 @@ let paths = {
         ],
 		dest: baseDir + '/css',
     },
+    htmls: {
+		src: baseDir,
+        dest: baseDir,
+    },
     scripts: {
 		src: baseDir + '/js/app.js',
         dest: baseDir + '/js',
@@ -49,6 +53,7 @@ const uglify = require('gulp-uglify-es').default;
 const newer = require('gulp-newer');
 const imagemin = require('gulp-imagemin');
 const svgSprite = require('gulp-svg-sprite');
+const version = require('gulp-version-number');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 
@@ -60,14 +65,29 @@ function browsersync() {
 	})
 }
 
+const versionConfig = {
+    'value': '%MDS%',
+    'append': {
+        'key': 'v',
+        'to': ['css', 'js'],
+    },
+};
+
 function styles() {
 	return src(paths.styles.src)
         .pipe(eval(preprocessor)({ outputStyle: 'compressed' }))
         .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
+        //.pipe(version(versionConfig))
         .pipe(rename({ suffix: '.min' }))
         .pipe(dest(paths.styles.dest))
         .pipe(browserSync.stream())
 }
+
+//function html() {
+//    return src(paths.htmls.src)
+//        .pipe(version(versionConfig))
+//        .pipe(dest(paths.htmls.dest))
+//}
 
 function scripts() {
 	return src(paths.scripts.src)
@@ -124,6 +144,7 @@ exports.sprites = sprites;
 exports.images = images;
 exports.libs = libs;
 exports.scripts = scripts;
+//exports.html = html;
 exports.styles = styles;
 exports.browsersync = browsersync;
 exports.default = parallel(styles, libs, scripts, images, sprites, browsersync, startwatch);

@@ -441,66 +441,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // FANCYBOX
-    if (window.innerWidth > 767) {
-        Fancybox.bind('[data-fancybox="gallery"]', {
-            animated: false,
-            dragToClose: false,
-            showClass: false,
-            hideClass: false,
-            closeButton: "top",
-    
-            Image: {
-                click: "close",
-                wheel: "slide",
-                zoom: false,
-            },
-    
-            thumbs: {
-                autoStart: true,
-                axis: 'x'
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        animated: false,
+        dragToClose: false,
+        showClass: false,
+        hideClass: false,
+        closeButton: "top",
+
+        Image: {
+            click: "close",
+            wheel: "slide",
+            zoom: false,
+        },
+
+        thumbs: {
+            autoStart: true,
+            axis: 'x'
+        }
+    });
+
+    document.querySelectorAll('[data-fancybox="gallery"]').forEach(item => {
+        item.addEventListener('click', (event) => {
+            if (window.innerWidth < 768) {
+                event.preventDefault()
             }
-        });
-    }
-
-    //document.querySelectorAll('data-fancybox="gallery"]').forEach(item => {
-    //    item.addEventListener('click', () => {
-    //        console.log('dsassa')
-    //    })
-    //})
-
-    //Fancybox.bind('[data-fancybox="gallery"]', {
-    //    //loop: true,
-    //    //arrows: false,
-    //    //infobar: false,
-    //    //margin: [44,0,22,0],
-    //    //thumbs : {
-    //    //    autoStart : true,
-    //    //    axis : 'x'
-    //    //}
-    
-    //    animated: false,
-    //    dragToClose: false,
-    //    showClass: false,
-    //    hideClass: false,
-    //    closeButton: "top",
-
-    //    Image: {
-    //        click: "close",
-    //        wheel: "slide",
-    //        zoom: false,
-    //    },
-
-    //    thumbs: {
-    //        autoStart: true,
-    //        axis: 'x'
-    //    }
-
-    //    //Thumbs: {
-    //    //    Carousel: {
-    //    //      center: function () {
-    //    //        return this.elemDimWidth > this.wrapDimWidth;
-    //    //      },
-    //    //    },
-    //    //},
-    //});
+        })
+    })
 });
