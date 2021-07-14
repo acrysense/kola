@@ -6,11 +6,32 @@
         width: 100%
         height: 437px
         &:hover
+            &::before
+                opacity: 1
             .gallery
                 &__buttons
                     .swiper-button-prev,
                     .swiper-button-next
                         opacity: 1
+        &::before
+            content: ''
+            position: absolute
+            top: 50%
+            left: 50%
+            z-index: 100
+            transform: translate(-50%, -50%)
+            display: block
+            width: 108px
+            height: 108px
+            opacity: 0
+            background-color: rgba(#273A43, 0.6)
+            background-image: url(../img/dist/sprite.svg#icon-full-view)
+            background-repeat: no-repeat
+            background-size: 36px
+            background-position: center center
+            border-radius: 50%
+            pointer-events: none
+            transition: all 0.4s
         .swiper-slide img
             width: 100%
             height: 100%
@@ -61,16 +82,21 @@
             z-index: 1
             display: block
             padding: 0
-            width: 15%
+            width: 10%
             height: 100%
             opacity: 0
-            background: rgba(#273A43, 0.6)
+            background-color: rgba(#273A43, 0.6)
+            background-repeat: no-repeat
+            background-size: 42px
+            background-position: center center
             border: 0
             transition: all 0.4s
         .swiper-button-prev
             left: 0
+            background-image: url(../img/dist/sprite.svg#arrow-left-white)
         .swiper-button-next
             right: 0
+            background-image: url(../img/dist/sprite.svg#arrow-right-white)
 
 // fancybox
 .fancybox__container

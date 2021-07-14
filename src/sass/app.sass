@@ -129,6 +129,9 @@
     &--hidden
         visibility: hidden
         max-height: 0
+    &__subtitle
+        margin-top: 20px
+        font-size: 25px
     &__input
         width: 100%
     &__input + &__input,
@@ -175,6 +178,10 @@
         line-height: 190%
         a
             display: inline
+
+// map
+.map
+    height: 800px
 
 // location
 .location
@@ -528,6 +535,7 @@
             height: 100%
             background: linear-gradient(to top, #3E5D81 20.91%, rgba(255, 255, 255, 0) 89.2%)
             mix-blend-mode: multiply
+            border-radius: 24px
         &:hover
             color: $dark-color
             &::before
@@ -720,5 +728,202 @@
 
 .lodge-scheme
     cursor: pointer
+
+// places
+.places
+    display: flex
+    margin-top: 54px
+    &__content
+        margin-left: 94px
+    &__group + &__group
+        margin-top: 40px
+    &__text
+        display: block
+        font-size: 25px
+        line-height: 150%
+    &__value
+        display: block
+        font-size: 30px
+        line-height: 150%
+        color: $red-color
+
+// reports
+.reports
+    margin-top: 100px
+    &__wrapper
+        display: flex
+        align-items: flex-start
+    &__wrapper + &__wrapper
+        margin-top: 80px
+    &__text
+        display: block
+        margin-right: 40px
+        font-size: 18px
+        line-height: 150%
+        letter-spacing: 0.1em
+        text-transform: uppercase
+    &__list
+        display: flex
+        flex-wrap: wrap
+        width: 100%
+    &__item
+        position: relative
+        overflow: hidden
+        display: block
+        padding-bottom: 157px
+        margin-right: 40px
+        width: 157px
+        height: 100%
+        border-radius: 20px
+
+    &__link
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        padding: 7px 13px
+        width: 100%
+        height: 100%
+        font-size: 22px
+        font-weight: 500
+        line-height: 150%
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+        border-radius: 20px
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            z-index: 1
+            display: block
+            width: 100%
+            height: 100%
+            background: linear-gradient(to top, #57779C 0%, rgba(255, 255, 255, 0) 78.11%)
+            mix-blend-mode: multiply
+        span
+            position: relative
+            z-index: 1
+
+// report
+.report
+    padding-top: 180px
+    &__img
+        position: absolute
+        top: 0
+        right: 0
+        left: 0
+        z-index: -1
+        height: 1270px
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: top center
+    &__inner
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+    &__title
+        font-size: 50px
+        font-weight: 300
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        margin-top: 26px
+    &__left
+        width: 40%
+    &__go-to
+        margin-top: 0
+    &__info
+        margin-top: 90px
+        span
+            font-size: 24px
+            line-height: 150%
+        span + span
+            color: $red-color
+    &__right
+        margin-left: 5%
+        width: 55%
+    &__right
+        img
+            overflow: hidden
+            width: 100%
+            border-radius: 24px
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+        img + span
+            margin-top: 26px
+        span
+            display: flex
+            align-items: flex-start
+            font-size: 20px
+            font-weight: 300
+            line-height: 150%
+            color: $super-light-color
+            &::before
+                content: ''
+                display: block
+                margin-top: 6px
+                margin-right: 10px
+                min-width: 20px
+                min-height: 20px
+                max-width: 20px
+                max-height: 20px
+                vertical-align: middle
+                background-image: url(../img/dist/sprite.svg#icon-caret-red)
+                background-repeat: no-repeat
+                background-size: cover
+                background-position: center center
+                transform: rotate(180deg)
+    &__content
+        margin-top: 62px
+        p
+            font-size: 24px
+            line-height: 190%
+            color: $light-grey-color
+        p + img
+            margin-top: 48px
+        img
+            overflow: hidden
+            width: 100%
+            border-radius: 24px
+        img + span
+            margin-top: 26px
+        img + p
+            margin-top: 48px
+        span
+            display: flex
+            align-items: flex-start
+            margin-left: 36px
+            font-size: 20px
+            font-weight: 300
+            line-height: 150%
+            color: $super-light-color
+            &::before
+                content: ''
+                display: block
+                margin-top: 6px
+                margin-right: 10px
+                min-width: 20px
+                min-height: 20px
+                max-width: 20px
+                max-height: 20px
+                vertical-align: middle
+                background-image: url(../img/dist/sprite.svg#icon-caret-red)
+                background-repeat: no-repeat
+                background-size: cover
+                background-position: center center
+                transform: rotate(180deg)
+        span + p
+            margin-top: 48px
 
 @import "media" // Always at the end

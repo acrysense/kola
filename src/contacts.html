@@ -6,7 +6,7 @@
     <title>Kola Reserve - Contacts</title>
     <!-- Styles -->
     <link rel="stylesheet" href="css/vendor.min.css">
-    <link rel="stylesheet" href="css/app-v1.min.css">
+    <link rel="stylesheet" href="css/app-v2.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -111,15 +111,17 @@
                         <a href="mailto:emercom@51.mchs.gov.ru" class="contacts__elem">emercom@51.mchs.gov.ru</a>
                         <span class="contacts__elem">Call center: <a href="tel:88152451475">8 (8152) 45-14-75</a></span>
                     </div>
+                    <div class="contacts__wrapper">
+                        <h3 class="contacts__title">Whats app</h3>
+                        <span class="contacts__elem"><a href="tel:88152451475">+7 999 022-65-00</a></span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- End of offer -->
     <!-- Map -->
-    <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1433.4423743360228!2d33.096464116352585!3d68.9443159132866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x44340feeb6a86f2b%3A0xf04e358a1b49604b!2z0L_RgNC-0YHQvy4g0JrQvtC70YzRgdC60LjQuSwgMjfQkCwg0JzRg9GA0LzQsNC90YHQuiwg0JzRg9GA0LzQsNC90YHQutCw0Y8g0L7QsdC7Liwg0KDQvtGB0YHQuNGPLCAxODMwMzI!5e0!3m2!1sru!2sua!4v1625030298280!5m2!1sru!2sua" width="100%" height="800" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
+    <div class="map" id="map"></div>
     <!-- End of map -->
     <!-- Join us -->
     <section class="join-us">
@@ -155,6 +157,22 @@
                     <input type="checkbox" class="square-checkbox__input" id="already-been">
                     <span class="square-checkbox__icon"></span>
                     <span class="square-checkbox__label">I’ve already been to Kola Peninsula</span>
+                </label>
+                <h4 class="form-join__subtitle">Tag if you want to recieve infromation:</h4>
+                <label for="infromation-checkbox-01" class="square-checkbox form-join__checkbox">
+                    <input type="checkbox" class="square-checkbox__input" id="infromation-checkbox-01">
+                    <span class="square-checkbox__icon"></span>
+                    <span class="square-checkbox__label">season pricing</span>
+                </label>
+                <label for="infromation-checkbox-02" class="square-checkbox form-join__checkbox">
+                    <input type="checkbox" class="square-checkbox__input" id="infromation-checkbox-02">
+                    <span class="square-checkbox__icon"></span>
+                    <span class="square-checkbox__label">updates and news</span>
+                </label>
+                <label for="infromation-checkbox-03" class="square-checkbox form-join__checkbox">
+                    <input type="checkbox" class="square-checkbox__input" id="infromation-checkbox-03">
+                    <span class="square-checkbox__icon"></span>
+                    <span class="square-checkbox__label">annual fishing summary</span>
                 </label>
                 <button class="form-join__btn btn">send</button>
             </form>
@@ -270,5 +288,24 @@
     <!-- Scripts -->
     <script src="js/vendor.min.js"></script>
     <script src="js/app.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOwnElKwsq7_jyeRI5VzCWeX0kBms-rxQ&callback=initMap&libraries=&v=weekly" async></script>
+    <script>
+        let map;
+
+        function initMap() {
+            // The location of Murmansk
+            const location = { lat: 68.94439493244953, lng: 33.098727900543395 };
+            // The map, centered at Murmansk
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 17,
+                center: location,
+            });
+            // The marker, positioned at Murmansk
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+            });
+        }
+    </script>
 </body>
 </html>
