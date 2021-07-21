@@ -364,6 +364,8 @@
         &__link
             padding: 6px 12px
             font-size: 18px
+    .grid
+        gap: 27px
     
 @media (min-width: 1024px)
     .dropdown
@@ -461,6 +463,10 @@
     .rivers
         &--mobile
             margin-top: 36px
+    .rivers-tabs
+        &__btn
+            margin-top: 40px
+            min-width: 100%
     .reports
         &__wrapper
             flex-direction: column
@@ -750,10 +756,11 @@
                 margin-top: 30px
     .location
         &__inner
-            justify-content: flex-start
             margin-top: 40px
         &__title
             font-size: 34px
+    .grid
+        gap: 22px
 
 @media (min-width: 768px) and (max-width: 899px)
     .rivers
@@ -784,6 +791,9 @@
     .logotype:not(.footer__logotype)
         max-width: 98px
     .offer
+        padding-bottom: 30px
+        &--main
+            background-position: center center
         &--start
             padding-bottom: 120px
         &__title
@@ -977,6 +987,8 @@
                 font-size: 18px
             & > p
                 font-size: 14px
+                a
+                    text-decoration: underline
             & > img
                 margin: 24px auto 0
             & > img + *
@@ -1114,10 +1126,11 @@
                     margin-top: 1px
     .location
         &__inner
-            justify-content: flex-start
             margin-top: 40px
         &__title
             font-size: 28px
+    .grid
+        gap: 20px
 
 @media (min-width: 576px) and (max-width: 1023px)
     .about
@@ -1274,3 +1287,11 @@
             &--kachkovka
                 & > .rivers__dot
                     margin-left: 32px
+
+@media screen and (min-width: 320px)
+    .grid
+        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr))
+    .grid .span-h
+        grid-column: span 2
+    .grid .span-v
+        grid-row: span 2

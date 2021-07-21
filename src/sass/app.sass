@@ -13,8 +13,8 @@
     justify-content: center
     align-items: flex-start
     padding-top: 133px
-    height: 100vh
-    height: calc(var(--vh, 1vh) * 100)
+    min-height: 100vh
+    min-height: calc(var(--vh, 1vh) * 100)
     background-blend-mode: multiply
     background-repeat: no-repeat
     background-size: cover
@@ -204,8 +204,7 @@
     &__inner
         display: flex
         align-items: center
-        justify-content: space-around
-        margin-top: 160px
+        margin-top: 140px
 
 // rivers tabs
 .rivers-tabs
@@ -214,10 +213,53 @@
         background-repeat: no-repeat
         background-size: cover
         background-position: center center
-        svg path
-            cursor: pointer
-            &:hover
-                stroke: $white-color
+    &__item
+        cursor: pointer
+        &--active
+            fill: rgba($white-color, 0.4)
+            stroke: transparent
+    &__item:not(.rivers-tabs__item--active)
+        &:hover
+            stroke: $white-color
+    &__content
+        display: none
+        margin-top: 36px
+        &--active
+            display: block
+    &__btn
+        display: block
+        margin: 66px auto 0
+        width: fit-content
+        min-width: 698px
+
+.grid
+    display: grid
+    grid-template-columns: repeat(auto-fit, 1fr)
+    grid-auto-rows: 1fr
+    grid-auto-flow: dense
+    gap: 30px
+    margin: auto
+    &::before
+        content: ''
+        grid-column: 1
+        grid-row: 1
+        padding-bottom: 100%
+    & > *
+        display: grid
+        place-items: center
+        border-radius: 24px
+        overflow: hidden
+        position: relative
+    & > *:first-child
+        grid-column: 1
+        grid-row: 1
+    & > * > img
+        display: block
+        object-fit: cover
+        object-position: center
+        position: absolute
+        width: 100%
+        height: 100%
 
 // rivers
 .rivers
@@ -642,13 +684,17 @@
         & > p
             font-size: 20px
             line-height: 190%
+            a
+                word-break: break-all
+                text-decoration: underline
         & > img
             overflow: hidden
             margin: 48px auto 0
             width: 100%
             text-align: center
             border-radius: 21px
-        & > img + *
+        & > img + h3,
+        & > p + h3
             margin-top: 48px
 
 // tabs
@@ -798,6 +844,7 @@
         display: block
         font-size: 40px
         font-weight: 500
+        cursor: pointer
     &__buttons
         position: absolute
         top: 50%

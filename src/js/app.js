@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function smoothScroll(eID) {
         let startY = currentYPosition();
-        let stopY = elmYPosition(eID) - Number(header.clientHeight);
+        let stopY = elmYPosition(eID) - Number(header.clientHeight + 10);
         let distance = stopY > startY ? stopY - startY : startY - stopY;
         if (distance < 100) {
             scrollTo(0, stopY); return;
@@ -376,6 +376,7 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesPerView: 4,
         observer: true,
         observeParents: true,
+        slideToClickedSlide: true,
         navigation: {
             prevEl: '.swiper-button-prev-unique',
             nextEl: '.swiper-button-next-unique'
@@ -423,8 +424,8 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault()
 
             schemeNum = '.scheme' + (i + 1)
-            document.querySelectorAll(schemeNum).forEach(child => child.style.fill = '#F93C00')
-            document.querySelectorAll(schemeNum).forEach(child => child.style.stroke = '#F93C00')
+            document.querySelectorAll(schemeNum).forEach(child => child.style.fill = '#B3CBE6')
+            document.querySelectorAll(schemeNum).forEach(child => child.style.stroke = '#B3CBE6')
         })
         item.addEventListener('mouseout', (event) => {
             event.preventDefault()
@@ -440,8 +441,8 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault()
 
             schemeNumTo = item.classList[1].slice(-1)
-            item.style.fill = '#F93C00'
-            item.style.stroke = '#F93C00'
+            item.style.fill = '#B3CBE6'
+            item.style.stroke = '#B3CBE6'
             document.querySelectorAll('.lodge-plan__link')[schemeNumTo - 1].style.color = '#F93C00'
         })
         item.addEventListener('mouseout', (event) => {
@@ -458,26 +459,43 @@ document.addEventListener('DOMContentLoaded', function () {
     const informationTrigger = document.querySelectorAll('.information__trigger')
 
     if (informationTrigger) {
-        informationTrigger.forEach(item => { item.parentNode.style.setProperty('max-height', `${item.clientHeight}px`) })
+        informationTrigger.forEach(item => { item.parentNode.style.setProperty('max-height', `${item.getBoundingClientRect().height}px`) })
 
         informationTrigger.forEach(item => {
             item.addEventListener('click', (event) => {
                 event.preventDefault()
                 
-                let heightInformationTrigger = item.clientHeight;
-                let heightInformationContent = item.nextElementSibling.clientHeight;
+                let heightInformationTrigger = item.getBoundingClientRect().height;
+                let heightInformationContent = item.nextElementSibling.getBoundingClientRect().height;
                 if (!item.parentNode.classList.contains('information__mobile-item--active')) {
                     informationTrigger.forEach(item => {
-                        item.parentNode.style.setProperty('max-height', `${item.clientHeight}px`)
+                        item.parentNode.style.setProperty('max-height', `${item.getBoundingClientRect().height}px`)
                         item.parentNode.classList.remove('information__mobile-item--active')
                     })
 
                     item.parentNode.classList.add('information__mobile-item--active')
-                    item.parentNode.style.setProperty('max-height', `${heightInformationContent}px`)
+                    item.parentNode.style.setProperty('max-height', `${heightInformationTrigger + heightInformationContent}px`)
+
+                    setTimeout(() => smoothScroll(item.parentNode.id), 400)
                 } else {
                     item.parentNode.classList.remove('information__mobile-item--active')
                     item.parentNode.style.setProperty('max-height', `${heightInformationTrigger}px`)
                 }
+            })
+        })
+    }
+
+    // RIVERS TABS
+    const riversTabsItems = document.querySelectorAll('.rivers-tabs__item')
+
+    if (riversTabsItems) {
+        riversTabsItems.forEach((item, i) => {
+            item.addEventListener('click', () => {
+                document.querySelectorAll('.rivers-tabs__item').forEach((child) => child.classList.remove('rivers-tabs__item--active'))
+                document.querySelectorAll('.rivers-tabs__content').forEach((child) => child.classList.remove('rivers-tabs__content--active'))
+    
+                item.classList.add('rivers-tabs__item--active')
+                document.querySelectorAll('.rivers-tabs__content')[i].classList.add('rivers-tabs__content--active')
             })
         })
     }
