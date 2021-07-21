@@ -18,7 +18,7 @@
     background-blend-mode: multiply
     background-repeat: no-repeat
     background-size: cover
-    background-position: center center
+    background-position: center right
     &--start
         justify-content: flex-start
         height: auto
@@ -207,6 +207,18 @@
         justify-content: space-around
         margin-top: 160px
 
+// rivers tabs
+.rivers-tabs
+    margin-top: 30px
+    &__map
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+        svg path
+            cursor: pointer
+            &:hover
+                stroke: $white-color
+
 // rivers
 .rivers
     position: relative
@@ -215,13 +227,14 @@
     background-repeat: no-repeat
     background-size: cover
     background-position: center center
+    background-blend-mode: multiply
     &--mobile
         padding-top: 0
         margin-top: 0
         min-height: 100%
     &__img
         overflow: hidden
-        margin-top: 100px
+        margin-top: 70px
         margin-left: auto
         max-width: 513px
         width: 100%
@@ -244,23 +257,26 @@
         z-index: 1
     &__item
         &--olenka
-            top: 225px
+            top: 178px
             & > .rivers__dot
-                margin-left: 305px
-        &--lumbovka
-            top: 470px
-            & > .rivers__dot
-                margin-left: 485px
+                margin-left: 225px
                 span
-                    margin-top: -5px
-                    margin-left: 15px
+                    margin-top: -12px
+                    margin-left: 18px
+        &--lumbovka
+            top: 430px
+            & > .rivers__dot
+                margin-left: 478px
+                span
+                    margin-top: -6px
+                    margin-left: 22px
         &--kachkovka
-            top: 520px
+            top: 478px
             & > .rivers__dot 
                 margin-left: 482px
                 span
-                    margin-top: 15px
-                    margin-left: -20px
+                    margin-top: 2px
+                    margin-left: -10px
     &__dot
         display: flex
         align-items: flex-start
@@ -749,7 +765,72 @@
 
 // reports
 .reports
-    margin-top: 100px
+    &__img
+        position: absolute
+        top: 0
+        right: 0
+        left: 0
+        z-index: -1
+        height: 1014px
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: top center
+    &__slider
+        position: relative
+        margin: 72px 0
+        .swiper-container
+            margin-left: 143px
+            max-width: 643px
+        .swiper-slide
+            opacity: 0.2
+            transition: opacity 0.4s
+        .swiper-slide-prev
+            opacity: 1
+        .swiper-slide-active
+            opacity: 1
+        .swiper-slide-active + .swiper-slide
+            opacity: 0.6
+        .swiper-slide-active + .swiper-slide + .swiper-slide
+            opacity: 0.4
+        .swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide
+            opacity: 0.2
+    &__year
+        display: block
+        font-size: 40px
+        font-weight: 500
+    &__buttons
+        position: absolute
+        top: 50%
+        right: 0
+        left: 0
+        transform: translateY(-50%)
+        display: flex
+        align-items: center
+        justify-content: space-between
+        max-width: 929px
+        height: 48px
+        .swiper-button-prev-unique,
+        .swiper-button-next-unique
+            display: block
+            padding: 0
+            width: 56px
+            height: 48px
+            background-color: transparent
+            background-repeat: no-repeat
+            background-size: 70%
+            background-position: center center
+            border: 0
+            transition: all 0.4s
+        .swiper-button-prev-unique
+            left: 0
+            background-image: url(../img/dist/sprite.svg#arrow-left-unique)
+        .swiper-button-next-unique
+            right: 0
+            background-image: url(../img/dist/sprite.svg#arrow-right-unique)
+    &__wrap
+        display: none
+        &--active
+            display: block
     &__wrapper
         display: flex
         align-items: flex-start
@@ -758,6 +839,8 @@
     &__text
         display: block
         margin-right: 40px
+        max-width: 100px
+        width: 100%
         font-size: 18px
         line-height: 150%
         letter-spacing: 0.1em

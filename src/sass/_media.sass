@@ -60,7 +60,7 @@
             width: calc(100% - 445px - 76px)
     .rivers
         &__body
-            max-width: 513px
+            max-width: 800px
         &__item
             width: 1380px
     .reports
@@ -157,22 +157,20 @@
                 max-width: 313px
     .rivers
         &__body
-            max-width: 628px
+            max-width: 800px
         &__item
             width: 1130px
             &--olenka
-                top: 215px
+                top: 178px
                 & > .rivers__dot
-                    margin-left: 170px
-                    span
-                        margin-left: 0
+                    margin-left: 100px
             &--lumbovka
                 & > .rivers__dot
-                    margin-left: 355px
+                    margin-left: 353px
             &--kachkovka
-                top: 520px
+                top: 478px
                 & > .rivers__dot
-                    margin-left: 360px
+                    margin-left: 357px
     .reports
         &__item
             &:nth-child(n + 6)
@@ -310,23 +308,24 @@
                 margin-top: 36px
     .rivers
         &__img
+            margin-top: 40px
             margin-left: auto
-            max-width: 462px
+            max-width: 460px
         &__body
             margin-bottom: 72px
             max-width: 703px
         &__item
             width: 950px
             &--olenka
-                top: 225px
+                top: 180px
                 & > .rivers__dot
-                    margin-left: 95px
+                    margin-left: 10px
             &--lumbovka
-                top: 470px
+                top: 431px
                 & > .rivers__dot
-                    margin-left: 270px
+                    margin-left: 264px
             &--kachkovka
-                top: 522px
+                top: 479px
                 & > .rivers__dot
                     margin-left: 268px
     .tabs
@@ -479,6 +478,19 @@
             padding: 6px 12px
             font-size: 18px
 
+@media (min-width: 900px) and (max-width: 1023px)
+    .rivers
+        &__item
+            &--olenka
+                & > .rivers__dot
+                    margin-left: -240px
+            &--lumbovka
+                & > .rivers__dot
+                    margin-left: 130px
+            &--kachkovka
+                & > .rivers__dot
+                    margin-left: 154px
+
 @media (min-width: 768px) and (max-width: 1279px)
     .history
         margin: 68px 50px 0
@@ -519,6 +531,10 @@
                     margin-top: 5%
             .media__content
                 padding: 18px 20px
+    .reports
+        &__img
+            height: 700px
+            background-position: center right 100%
     .report
         &__img
             height: 743px
@@ -548,11 +564,16 @@
     .offer
         &--start
             padding-bottom: 86px
+        &--main
+            .offer__wrapper
+                max-width: 90%
         &__title
-            font-size: 32px
+            max-width: 100%
+            font-size: 50px
         &__description
             margin-top: 20px
-            font-size: 16px
+            max-width: 100%
+            font-size: 20px
     .contacts
         &__title
             font-size: 23px
@@ -666,19 +687,13 @@
             margin-bottom: 0
             max-width: 350px
         &__item
-            width: calc(100% - 80px)
+            width: fit-content
             &--olenka
-                top: 170px
-                & > .rivers__dot
-                    margin-left: 17%
+                top: 139px
             &--lumbovka
-                top: 362px
-                & > .rivers__dot
-                    margin-left: 32%
+                top: 334px
             &--kachkovka
-                top: 400px
-                & > .rivers__dot
-                    margin-left: 31%
+                top: 369px
     .tabs
         &__button
             font-size: 23px
@@ -712,6 +727,46 @@
             font-size: 16px
         &__value
             font-size: 20px
+    .reports
+        &__slider
+            margin: 60px 0 34px
+            .swiper-container
+                margin: 0 auto
+                max-width: 528px
+        &__year
+            font-size: 38px
+        &__buttons
+            max-width: 100%
+            .swiper-button-prev-unique,
+            .swiper-button-next-unique
+                width: 42px
+                height: 34px
+        &__item
+            padding-bottom: 20%
+            width: 20%
+            &:nth-child(4n)
+                margin-right: 0
+            &:nth-child(n + 5)
+                margin-top: 30px
+    .location
+        &__inner
+            justify-content: flex-start
+            margin-top: 40px
+        &__title
+            font-size: 34px
+
+@media (min-width: 768px) and (max-width: 899px)
+    .rivers
+        &__item
+            &--olenka
+                & > .rivers__dot
+                    margin-left: -220px
+            &--lumbovka
+                & > .rivers__dot
+                    margin-left: 160px
+            &--kachkovka
+                & > .rivers__dot
+                    margin-left: 182px
 
 @media (min-width: 768px)
     .contacts
@@ -732,10 +787,10 @@
         &--start
             padding-bottom: 120px
         &__title
-            font-size: 30px
+            font-size: 36px
         &__description
             margin-top: 22px
-            font-size: 14px
+            font-size: 16px
     .contacts
         flex-direction: column
         &__wrapper
@@ -893,6 +948,8 @@
         &__list,
         &__content
             display: none
+        &__mobile
+            width: 100%
         &__mobile-item
             overflow: hidden
             margin-top: 24px
@@ -979,6 +1036,23 @@
         &__value
             font-size: 20px
     .reports
+        &__img
+            height: 536px
+            background-position: center right 100%
+        &__slider
+            margin: 32px 0
+            .swiper-container
+                margin: 0 auto
+                max-width: 75%
+        &__year
+            font-size: 22px
+            text-align: center
+        &__buttons
+            max-width: 100%
+            .swiper-button-prev-unique,
+            .swiper-button-next-unique
+                width: 26px
+                height: 18px
         &__wrapper + &__wrapper
             margin-top: 36px
         &__text
@@ -1038,6 +1112,12 @@
                 font-size: 16px
                 &::before
                     margin-top: 1px
+    .location
+        &__inner
+            justify-content: flex-start
+            margin-top: 40px
+        &__title
+            font-size: 28px
 
 @media (min-width: 576px) and (max-width: 1023px)
     .about
@@ -1058,18 +1138,28 @@
         margin: 32px 40px 0
     .rivers
         &__item
+            width: fit-content
             &--olenka
-                top: 105px
+                top: 100px
                 & > .rivers__dot
-                    margin-left: 20%
+                    margin-left: -224px
+                    svg
+                        width: 36px
+                        height: 48px
             &--lumbovka
-                top: 230px
+                top: 202px
                 & > .rivers__dot
-                    margin-left: 24%
+                    margin-left: -90px
+                    svg
+                        width: 92px
+                        height: 44px
             &--kachkovka
-                top: 260px
+                top: 225px
                 & > .rivers__dot
-                    margin-left: 20%
+                    margin-left: -12px
+                    svg
+                        width: 74px
+                        height: 36px
 
 @media (max-width: 575px)
     .offer
@@ -1098,26 +1188,27 @@
     .navigation-blocks
         margin: 32px 0 0
     .rivers
-        background-position: center left 30%
+        background-position: center left 40%
         &--mobile
             margin-top: 150px
         &__img
             max-width: calc(100% - 50px)
         &__item
+            width: fit-content
             &--olenka
-                top: 110px
+                top: 100px
                 & > .rivers__dot
-                    margin-left: 22%
-                    span
-                        &::after
-                            left: -10px
-                        &::before
-                            left: -5px
+                    margin-left: -100px
+                    svg
+                        width: 36px
+                        height: 48px
             &--lumbovka
-                top: 225px
+                top: 206px
                 & > .rivers__dot
-                    margin-left: auto
-                    margin-right: 51%
+                    margin-left: -15px
+                    svg
+                        width: 92px
+                        height: 44px
                     span
                         margin-left: 0
                         &::after
@@ -1129,10 +1220,12 @@
                             right: -5px
                             transform: translate(100%, -50%)
             &--kachkovka
-                top: 250px
+                top: 230px
                 & > .rivers__dot
-                    margin-left: auto
-                    margin-right: 46%
+                    margin-left: 6px
+                    svg
+                        width: 74px
+                        height: 36px
                     span
                         margin-left: 0
                         &::after
@@ -1155,12 +1248,29 @@
         &__title + &__title
             margin-top: 10px
 
+@media (max-width: 459px)
+    .rivers
+        &__item
+            &--kachkovka
+                & > .rivers__dot
+                    margin-left: 18px
+
 @media (max-width: 399px)
+    .rivers
+        &__item
+            &--olenka
+                & > .rivers__dot
+                    margin-left: -90px
+            &--kachkovka
+                & > .rivers__dot
+                    margin-left: 26px
+
+@media (max-width: 369px)
     .rivers
         &__item
             &--lumbovka
                 & > .rivers__dot
-                    margin-right: 44%
+                    margin-left: 15px
             &--kachkovka
                 & > .rivers__dot
-                    margin-right: 37%
+                    margin-left: 32px

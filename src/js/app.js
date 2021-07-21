@@ -370,6 +370,48 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     })
 
+    const swiperReports = document.querySelector('.reports__slider .swiper-container')
+
+    let mySwiperReports = new Swiper(swiperReports, {
+        slidesPerView: 4,
+        observer: true,
+        observeParents: true,
+        navigation: {
+            prevEl: '.swiper-button-prev-unique',
+            nextEl: '.swiper-button-next-unique'
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 3,
+            },
+            768: {
+                slidesPerView: 4,
+            },
+        }
+    })
+
+    const reportsWrapper = document.querySelectorAll('.reports__wrap')
+
+    mySwiperReports.on('slideChange', () => {
+        let num = mySwiperReports.activeIndex
+
+        if (innerWidth < 768) {
+            const slides = mySwiperReports.slides.length - 3
+
+            if (num === slides) {
+                mySwiperReports.slidePrev()
+            } else {
+                document.querySelectorAll('.reports__wrap').forEach((child) => child.classList.remove('reports__wrap--active'))
+        
+                reportsWrapper[num].classList.add('reports__wrap--active')
+            }
+        } else {
+            document.querySelectorAll('.reports__wrap').forEach((child) => child.classList.remove('reports__wrap--active'))
+    
+            reportsWrapper[num].classList.add('reports__wrap--active')
+        }
+    });
+
     // PLAN HOVER
     const planItem = document.querySelectorAll('.lodge-plan__link')
     const lodgeScheme = document.querySelectorAll('.lodge-scheme')

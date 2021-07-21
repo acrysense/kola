@@ -6,7 +6,7 @@
     <title>Kola Reserve - Fishing reports</title>
     <!-- Styles -->
     <link rel="stylesheet" href="css/vendor.min.css">
-    <link rel="stylesheet" href="css/app-v2.min.css">
+    <link rel="stylesheet" href="css/app-v3.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -92,112 +92,408 @@
     </header>
     <!-- End of header -->
     <!-- Lodge -->
-    <section class="content" id="content">
+    <section class="reports content" id="reports">
+        <div class="reports__img" style="background-image: linear-gradient(to bottom, rgba(39, 58, 67, 0.49) 0%, #273A43 70%), url(img/dist/reports-bg.jpg);"></div>
         <div class="container">
             <div class="content__wrapper">
                 <h2>Fishing reports</h2>
                 <p>Every season the rivers produce hundreds of big silver salmon larger than 20 pounds. To be exact — Over the last 2 seasons 17.6% of the salmon were 20+ pounders! The rivers will also produce more than 30 serious salmon every season that are greater than 30 pounds, in addition to a couple of serious monsters that are landed in the 40 pound class!</p>
             </div>
-            <div class="reports">
-                <div class="reports__wrapper">
-                    <span class="reports__text">SUMMER</span>
-                    <ul class="reports__list">
-                        <li class="reports__item">
-                            <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-01.jpeg);">
-                                <span>01-08.06</span>
-                            </a>
-                        </li>
-                        <li class="reports__item">
-                            <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-03.jpeg);">
-                                <span>11-20.06</span>
-                            </a>
-                        </li>
-                        <li class="reports__item">
-                            <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-04.jpeg);">
-                                <span>23.06-01.07</span>
-                            </a>
-                        </li>
-                        <li class="reports__item">
-                            <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-01.jpeg);">
-                                <span>03-10.07</span>
-                            </a>
-                        </li>
-                        <li class="reports__item">
-                            <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-04.jpeg);">
-                                <span>12-19.07</span>
-                            </a>
-                        </li>
-                        <li class="reports__item">
-                            <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-01.jpeg);">
-                                <span>22-29.07</span>
-                            </a>
-                        </li>
-                        <li class="reports__item">
-                            <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-06.jpeg);">
-                                <span>02-09.08</span>
-                            </a>
-                        </li>
-                        <li class="reports__item">
-                            <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-05.jpeg);">
-                                <span>12-20.08</span>
-                            </a>
-                        </li>
-                        <li class="reports__item">
-                            <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-05.jpeg);">
-                                <span>29.08-06.09</span>
-                            </a>
-                        </li>
-                    </ul>
+            <div class="reports__container">
+                <div class="reports__slider">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <span class="reports__year">2020</span>
+                            </div>
+                            <div class="swiper-slide">
+                                <span class="reports__year">2019</span>
+                            </div>
+                            <div class="swiper-slide">
+                                <span class="reports__year">2018</span>
+                            </div>
+                            <div class="swiper-slide">
+                                <span class="reports__year">2017</span>
+                            </div>
+                            <div class="swiper-slide">
+                                <span class="reports__year">2016</span>
+                            </div>
+                            <div class="swiper-slide">
+                                <span class="reports__year">2015</span>
+                            </div>
+                            <!-- Всегда оставлять 3 пустых слайда в конце -->
+                            <div class="swiper-slide">
+                                <span class="reports__year"></span>
+                            </div>
+                            <div class="swiper-slide">
+                                <span class="reports__year"></span>
+                            </div>
+                            <div class="swiper-slide">
+                                <span class="reports__year"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reports__buttons">
+                        <button class="swiper-button-prev-unique"></button>
+                        <button class="swiper-button-next-unique"></button>
+                    </div>
                 </div>
-                <div class="reports__wrapper">
-                    <span class="reports__text">AUTUMN</span>
-                    <ul class="reports__list">
-                        <li class="reports__item">
-                            <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-01.jpeg);">
-                                <span>01-08.06</span>
-                            </a>
-                        </li>
-                        <li class="reports__item">
-                            <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-03.jpeg);">
-                                <span>11-20.06</span>
-                            </a>
-                        </li>
-                        <li class="reports__item">
-                            <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-04.jpeg);">
-                                <span>23.06-01.07</span>
-                            </a>
-                        </li>
-                        <li class="reports__item">
-                            <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-06.jpeg);">
-                                <span>02-09.08</span>
-                            </a>
-                        </li>
-                        <li class="reports__item">
-                            <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-05.jpeg);">
-                                <span>12-20.08</span>
-                            </a>
-                        </li>
-                        <li class="reports__item">
-                            <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-05.jpeg);">
-                                <span>29.08-06.09</span>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="reports__wrap reports__wrap--active">
+                    <div class="reports__wrapper">
+                        <span class="reports__text">SUMMER</span>
+                        <ul class="reports__list">
+                            <li class="reports__item">
+                                <a href="report.html" class="reports__link" style="background-image: url(img/dist/lodge-01.jpeg);">
+                                    <span>01-08.06</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="report.html" class="reports__link" style="background-image: url(img/dist/lodge-03.jpeg);">
+                                    <span>11-20.06</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-04.jpeg);">
+                                    <span>23.06-01.07</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-01.jpeg);">
+                                    <span>03-10.07</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-04.jpeg);">
+                                    <span>12-19.07</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-01.jpeg);">
+                                    <span>22-29.07</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-06.jpeg);">
+                                    <span>02-09.08</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-05.jpeg);">
+                                    <span>12-20.08</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-05.jpeg);">
+                                    <span>29.08-06.09</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="reports__wrapper">
+                        <span class="reports__text">AUTUMN</span>
+                        <ul class="reports__list">
+                            <li class="reports__item">
+                                <a href="report.html" class="reports__link" style="background-image: url(img/dist/lodge-01.jpeg);">
+                                    <span>01-08.06</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="report.html" class="reports__link" style="background-image: url(img/dist/lodge-03.jpeg);">
+                                    <span>11-20.06</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-04.jpeg);">
+                                    <span>23.06-01.07</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-06.jpeg);">
+                                    <span>02-09.08</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-05.jpeg);">
+                                    <span>12-20.08</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-05.jpeg);">
+                                    <span>29.08-06.09</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="reports__wrapper">
+                        <span class="reports__text">ANNUAL</span>
+                        <ul class="reports__list">
+                            <li class="reports__item">
+                                <a href="report.html" class="reports__link" style="background-image: url(img/dist/lodge-01.jpeg);">
+                                    <span>01-08.06</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="report.html" class="reports__link" style="background-image: url(img/dist/lodge-03.jpeg);">
+                                    <span>11-20.06</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="reports__wrapper">
-                    <span class="reports__text">ANNUAL</span>
-                    <ul class="reports__list">
-                        <li class="reports__item">
-                            <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-01.jpeg);">
-                                <span>01-08.06</span>
-                            </a>
-                        </li>
-                        <li class="reports__item">
-                            <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-03.jpeg);">
-                                <span>11-20.06</span>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="reports__wrap">
+                    <div class="reports__wrapper">
+                        <span class="reports__text">AUTUMN</span>
+                        <ul class="reports__list">
+                            <li class="reports__item">
+                                <a href="report.html" class="reports__link" style="background-image: url(img/dist/lodge-01.jpeg);">
+                                    <span>01-08.06</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="report.html" class="reports__link" style="background-image: url(img/dist/lodge-03.jpeg);">
+                                    <span>11-20.06</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-04.jpeg);">
+                                    <span>23.06-01.07</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-06.jpeg);">
+                                    <span>02-09.08</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-05.jpeg);">
+                                    <span>12-20.08</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-05.jpeg);">
+                                    <span>29.08-06.09</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="reports__wrapper">
+                        <span class="reports__text">ANNUAL</span>
+                        <ul class="reports__list">
+                            <li class="reports__item">
+                                <a href="report.html" class="reports__link" style="background-image: url(img/dist/lodge-01.jpeg);">
+                                    <span>01-08.06</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="report.html" class="reports__link" style="background-image: url(img/dist/lodge-03.jpeg);">
+                                    <span>11-20.06</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="reports__wrap">
+                    <div class="reports__wrapper">
+                        <span class="reports__text">ANNUAL</span>
+                        <ul class="reports__list">
+                            <li class="reports__item">
+                                <a href="report.html" class="reports__link" style="background-image: url(img/dist/lodge-01.jpeg);">
+                                    <span>01-08.06</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="report.html" class="reports__link" style="background-image: url(img/dist/lodge-03.jpeg);">
+                                    <span>11-20.06</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="reports__wrap">
+                    <div class="reports__wrapper">
+                        <span class="reports__text">AUTUMN</span>
+                        <ul class="reports__list">
+                            <li class="reports__item">
+                                <a href="report.html" class="reports__link" style="background-image: url(img/dist/lodge-01.jpeg);">
+                                    <span>01-08.06</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="report.html" class="reports__link" style="background-image: url(img/dist/lodge-03.jpeg);">
+                                    <span>11-20.06</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-04.jpeg);">
+                                    <span>23.06-01.07</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-06.jpeg);">
+                                    <span>02-09.08</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-05.jpeg);">
+                                    <span>12-20.08</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-05.jpeg);">
+                                    <span>29.08-06.09</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="reports__wrap">
+                    <div class="reports__wrapper">
+                        <span class="reports__text">SUMMER</span>
+                        <ul class="reports__list">
+                            <li class="reports__item">
+                                <a href="report.html" class="reports__link" style="background-image: url(img/dist/lodge-01.jpeg);">
+                                    <span>01-08.06</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="report.html" class="reports__link" style="background-image: url(img/dist/lodge-03.jpeg);">
+                                    <span>11-20.06</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-04.jpeg);">
+                                    <span>23.06-01.07</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-01.jpeg);">
+                                    <span>03-10.07</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-04.jpeg);">
+                                    <span>12-19.07</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-01.jpeg);">
+                                    <span>22-29.07</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-06.jpeg);">
+                                    <span>02-09.08</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-05.jpeg);">
+                                    <span>12-20.08</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-05.jpeg);">
+                                    <span>29.08-06.09</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="reports__wrapper">
+                        <span class="reports__text">AUTUMN</span>
+                        <ul class="reports__list">
+                            <li class="reports__item">
+                                <a href="report.html" class="reports__link" style="background-image: url(img/dist/lodge-01.jpeg);">
+                                    <span>01-08.06</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="report.html" class="reports__link" style="background-image: url(img/dist/lodge-03.jpeg);">
+                                    <span>11-20.06</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-04.jpeg);">
+                                    <span>23.06-01.07</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-06.jpeg);">
+                                    <span>02-09.08</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-05.jpeg);">
+                                    <span>12-20.08</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-05.jpeg);">
+                                    <span>29.08-06.09</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="reports__wrap">
+                    <div class="reports__wrapper">
+                        <span class="reports__text">SUMMER</span>
+                        <ul class="reports__list">
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-01.jpeg);">
+                                    <span>22-29.07</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-06.jpeg);">
+                                    <span>02-09.08</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-05.jpeg);">
+                                    <span>12-20.08</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-05.jpeg);">
+                                    <span>29.08-06.09</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="reports__wrapper">
+                        <span class="reports__text">AUTUMN</span>
+                        <ul class="reports__list">
+                            <li class="reports__item">
+                                <a href="report.html" class="reports__link" style="background-image: url(img/dist/lodge-01.jpeg);">
+                                    <span>01-08.06</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="report.html" class="reports__link" style="background-image: url(img/dist/lodge-03.jpeg);">
+                                    <span>11-20.06</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-04.jpeg);">
+                                    <span>23.06-01.07</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-06.jpeg);">
+                                    <span>02-09.08</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-05.jpeg);">
+                                    <span>12-20.08</span>
+                                </a>
+                            </li>
+                            <li class="reports__item">
+                                <a href="#" class="reports__link" style="background-image: url(img/dist/lodge-05.jpeg);">
+                                    <span>29.08-06.09</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
