@@ -18,7 +18,7 @@
     background-blend-mode: multiply
     background-repeat: no-repeat
     background-size: cover
-    background-position: center right
+    background-position: center center
     &--start
         justify-content: flex-start
         height: auto
@@ -208,11 +208,27 @@
 
 // rivers tabs
 .rivers-tabs
-    margin-top: 30px
+    margin-top: 50px
     &__map
+        position: relative
         background-repeat: no-repeat
         background-size: cover
         background-position: center center
+    &__prompt
+        position: absolute
+        top: -50px
+        left: 445px
+        max-width: max-content
+        &::before
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            display: block
+            width: 0
+            height: 0
+            border-bottom: 60px solid red
+            border-left: 60px solid transparent
     &__item
         cursor: pointer
         &--active
@@ -274,6 +290,11 @@
         padding-top: 0
         margin-top: 0
         min-height: 100%
+    &__prompt
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        max-width: 217px
     &__img
         overflow: hidden
         margin-top: 70px
