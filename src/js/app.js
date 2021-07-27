@@ -424,8 +424,13 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault()
 
             schemeNum = '.scheme' + (i + 1)
-            document.querySelectorAll(schemeNum).forEach(child => child.style.fill = '#B3CBE6')
-            document.querySelectorAll(schemeNum).forEach(child => child.style.stroke = '#B3CBE6')
+            if ((i + 1) === 4 || (i + 1) === 6) {
+                document.querySelectorAll(schemeNum).forEach(child => child.style.fill = '#B3CBE6')
+                document.querySelectorAll(schemeNum).forEach(child => child.style.stroke = '#B3CBE6')
+            } else {
+                document.querySelectorAll(schemeNum).forEach(child => child.style.fill = '#F93C00')
+                document.querySelectorAll(schemeNum).forEach(child => child.style.stroke = '#F93C00')
+            }
         })
         item.addEventListener('mouseout', (event) => {
             event.preventDefault()
@@ -441,8 +446,13 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault()
 
             schemeNumTo = item.classList[1].slice(-1)
-            item.style.fill = '#B3CBE6'
-            item.style.stroke = '#B3CBE6'
+            if (schemeNumTo == 4 || schemeNumTo == 6) {
+                item.style.fill = '#B3CBE6'
+                item.style.stroke = '#B3CBE6'
+            } else {
+                item.style.fill = '#F93C00'
+                item.style.stroke = '#F93C00'
+            }
             document.querySelectorAll('.lodge-plan__link')[schemeNumTo - 1].style.color = '#F93C00'
         })
         item.addEventListener('mouseout', (event) => {
