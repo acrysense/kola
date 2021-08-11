@@ -144,57 +144,62 @@
     <!-- Join us -->
     <section class="join-us">
         <div class="container">
-            <h3 class="join-us__title">Stay tuned. <br>Our first fishing will take place in 2021 season</h3>
-            <h4 class="join-us__subtitle">Fill out the form that we can contact you for early booking.</h4>
-            <a href="#" class="form-join__btn form-join__btn--details btn">Leave us your details</a>
-            <form action="" class="form-join form-join--hidden">
-                <input type="text" class="form-join__input input" placeholder="Name">
-                <input type="email" class="form-join__input input" placeholder="E-mail*">
-                <!-- If input error - added class input-error -->
-                <!--<input type="email" class="form-join__input input input--error" placeholder="E-mail*" value="dghjkdhj@askjdvh.wrgh">-->
-                <div class="form-join__inner">
-                    <select class="form-join__select select" id="select-residence">
-                        <option value="0" disabled selected>Residence*</option>
-                        <option value="1">Residence 1</option>
-                        <option value="2">Residence 2</option>
-                        <option value="3">Residence 3</option>
-                    </select>
-                    <select class="form-join__select select" id="select-role">
-                        <option value="0" disabled selected>Your role*</option>
-                        <option value="1">Student</option>
-                        <option value="2">Worker</option>
-                        <option value="3">Business owner</option>
-                        <option value="4">Fisherman</option>
-                        <option value="5">Other</option>
-                    </select>
-                </div>
-                <input type="text" class="form-join__input input" placeholder="How did you find us">
-                <!-- Error message -->
-                <!--<span class="form-join__message">Check that the information you entered is correct.</span>-->
-                <label for="already-been" class="square-checkbox form-join__checkbox">
-                    <input type="checkbox" class="square-checkbox__input" id="already-been">
-                    <span class="square-checkbox__icon"></span>
-                    <span class="square-checkbox__label">I’ve already been to Kola Peninsula</span>
-                </label>
-                <h4 class="form-join__subtitle">Tag if you want to recieve infromation:</h4>
-                <label for="infromation-checkbox-01" class="square-checkbox form-join__checkbox">
-                    <input type="checkbox" class="square-checkbox__input" id="infromation-checkbox-01">
-                    <span class="square-checkbox__icon"></span>
-                    <span class="square-checkbox__label">season pricing</span>
-                </label>
-                <label for="infromation-checkbox-02" class="square-checkbox form-join__checkbox">
-                    <input type="checkbox" class="square-checkbox__input" id="infromation-checkbox-02">
-                    <span class="square-checkbox__icon"></span>
-                    <span class="square-checkbox__label">updates and news</span>
-                </label>
-                <label for="infromation-checkbox-03" class="square-checkbox form-join__checkbox">
-                    <input type="checkbox" class="square-checkbox__input" id="infromation-checkbox-03">
-                    <span class="square-checkbox__icon"></span>
-                    <span class="square-checkbox__label">annual fishing summary</span>
-                </label>
-                <button class="form-join__btn btn">send</button>
-            </form>
-            <p class="join-us__description">If you have any questions please contact Anna via <a href="mailto:sales@kola-reserve.com">sales@kola-reserve.com</a> or phone: <a href="tel:+79990226500">+7(999)022-65-00</a></p>
+            <div class="join-us__form">
+                <h3 class="join-us__title">Stay tuned. <br>Our first fishing will take place in 2021 season</h3>
+                <h4 class="join-us__subtitle">Fill out the form that we can contact you for early booking.</h4>
+                <a href="#" class="form-join__btn form-join__btn--details btn">Leave us your details</a>
+                <form action="" class="form-join form-join--hidden form-validate" novalidate>
+                    <input type="text" class="form-join__input input" placeholder="Name" required>
+                    <input type="email" class="form-join__input input" placeholder="E-mail*" required>
+                    <!-- If input error - added class input-error -->
+                    <!--<input type="email" class="form-join__input input input--error" placeholder="E-mail*" value="dghjkdhj@askjdvh.wrgh">-->
+                    <div class="form-join__inner">
+                        <select class="form-join__select select" id="select-residence" required>
+                            <option value="0" disabled selected>Residence*</option>
+                            <option value="1">Residence 1</option>
+                            <option value="2">Residence 2</option>
+                            <option value="3">Residence 3</option>
+                        </select>
+                        <select class="form-join__select select" id="select-role">
+                            <option value="0" disabled selected>Your role*</option>
+                            <option value="1">Student</option>
+                            <option value="2">Worker</option>
+                            <option value="3">Business owner</option>
+                            <option value="4">Fisherman</option>
+                            <option value="5">Other</option>
+                        </select>
+                    </div>
+                    <input type="text" class="form-join__input input" placeholder="How did you find us" required>
+                    <span class="form-join__message">Check that the information you entered is correct.</span>
+                    <label for="already-been" class="square-checkbox form-join__checkbox">
+                        <input type="checkbox" class="square-checkbox__input" id="already-been">
+                        <span class="square-checkbox__icon"></span>
+                        <span class="square-checkbox__label">I’ve already been to Kola Peninsula</span>
+                    </label>
+                    <h4 class="form-join__subtitle">Tag if you want to recieve infromation:</h4>
+                    <label for="infromation-checkbox-01" class="square-checkbox form-join__checkbox">
+                        <input type="checkbox" class="square-checkbox__input" id="infromation-checkbox-01">
+                        <span class="square-checkbox__icon"></span>
+                        <span class="square-checkbox__label">season pricing</span>
+                    </label>
+                    <label for="infromation-checkbox-02" class="square-checkbox form-join__checkbox">
+                        <input type="checkbox" class="square-checkbox__input" id="infromation-checkbox-02">
+                        <span class="square-checkbox__icon"></span>
+                        <span class="square-checkbox__label">updates and news</span>
+                    </label>
+                    <label for="infromation-checkbox-03" class="square-checkbox form-join__checkbox">
+                        <input type="checkbox" class="square-checkbox__input" id="infromation-checkbox-03">
+                        <span class="square-checkbox__icon"></span>
+                        <span class="square-checkbox__label">annual fishing summary</span>
+                    </label>
+                    <button class="form-join__btn btn">send</button>
+                </form>
+                <p class="join-us__description">If you have any questions please contact Anna via <a href="mailto:sales@kola-reserve.com">sales@kola-reserve.com</a> or phone: <a href="tel:+79990226500">+7(999)022-65-00</a></p>
+            </div>
+            <div class="join-us__success">
+                <h3 class="join-us__title">Thank you for the request! <br>We will get back to you shortly.</h3>
+                <p class="join-us__description">If you have any questions please contact Anna via <a href="mailto:sales@kola-reserve.com">sales@kola-reserve.com</a> or phone: <a href="tel:+79990226500">+7(999)022-65-00</a></p>
+            </div>
         </div>
     </section>
     <!-- End of join us -->

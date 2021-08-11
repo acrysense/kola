@@ -89,7 +89,7 @@ svg rect
     padding: 21px 24px
     font-size: 20px
     font-weight: normal
-    color: $dark-color
+    color: $white-color
     background: rgba($white-color, 0.15)
     border: 3px solid transparent
     border-radius: 10px
@@ -101,6 +101,7 @@ svg rect
         background: rgba($white-color, 0.2)
     &:focus
         outline: none
+        color: $dark-color
         background: rgba($white-color, 0.8)
         &::placeholder
             color: $dark-color
@@ -108,6 +109,9 @@ svg rect
         color: $orange-color
         background: rgba($white-color, 0.8)
         border: 3px solid $orange-color
+        &::placeholder,
+        &:focus::placeholder
+            color: $orange-color
         &:hover
             background: rgba($white-color, 0.8)
 

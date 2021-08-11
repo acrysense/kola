@@ -180,6 +180,46 @@ document.addEventListener('DOMContentLoaded', function () {
             select: '#select-river'
         });
     }
+
+
+    // FORM VALIDATE
+    const formValidate = document.querySelector('.form-join');
+
+    if (formValidate) {
+        const formInput = formValidate.querySelectorAll('.input');
+        const formErrorMessage = document.querySelector('.form-join__message')
+        
+        formValidate.addEventListener('submit', (event) => {
+            let validateCounter = formInput.length
+    
+            for (let input of formInput) {
+                const inputError = input
+    
+                if (input.validity.valid === false) {
+                    if (!formErrorMessage.classList.contains('form-join__message--active')) {
+                        formErrorMessage.classList.add('form-join__message--active')
+                    }
+                    inputError.classList.add('input--error');
+                    inputError.textContent = 'Значение введено неверно';
+                } else {
+                    validateCounter -= 1
+                    inputError.classList.remove('input--error');
+                    inputError.textContent = '';
+                }
+            }
+    
+            if (validateCounter < 1) {
+                for (let input of formInput) {
+                    input.value = ''
+                    if (formErrorMessage.classList.contains('form-join__message--active')) {
+                        formErrorMessage.classList.remove('form-join__message--active')
+                    }
+                }
+            } else {
+                event.preventDefault()
+            }
+        });
+    }
     
     // MOBILE MENU
     const hamburger = document.getElementById('hamburger-toggle')
