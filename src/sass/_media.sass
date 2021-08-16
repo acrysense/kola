@@ -89,7 +89,9 @@
                 &:nth-child(5n - 2),
                 &:nth-child(5n - 3)
                     margin-left: 2.5%
-
+    .widget
+        margin-left: 206px
+    
 @media (min-width: 1280px) and (max-width: 1749px)
     .about
         &__description
@@ -159,9 +161,6 @@
             & > p
                 max-width: 313px
     .rivers
-        &__prompt
-            top: 280px
-            margin-left: -305px
         &__body
             max-width: 800px
         &__item
@@ -177,6 +176,10 @@
                 top: 478px
                 & > .rivers__dot
                     margin-left: 357px
+    .rivers-tabs
+        &__prompt
+            top: -35px
+            left: 305px
     .reports
         &__item
             &:nth-child(n + 6)
@@ -215,6 +218,12 @@
         &__img
             margin: 0 auto
             max-width: 100%
+        &__inner
+            flex-wrap: wrap
+        &__metric
+            justify-content: space-between
+            margin-top: 20px
+            width: 100%
 
 @media (min-width: 1024px) and (max-width: 1279px)
     .offer
@@ -585,6 +594,9 @@
         &__prompt
             top: 34px
             left: 50%
+    .google-maps
+        &__coord
+            font-size: 14px
 
 @media (min-width: 768px) and (max-width: 1023px)
     .offer
@@ -1237,6 +1249,40 @@
             top: -40px
             left: auto
             right: 0
+    .location
+        &__metric
+            align-items: flex-start
+            flex-direction: column
+    .widget
+        margin-top: 24px
+        &__top
+            top: -18px
+            left: 20px
+        &__date
+            font-size: 14px
+        &__popup
+            right: auto
+            left: 0
+            bottom: -26px
+        &__content
+            padding: 12px 10px
+            border-radius: 20px
+        &__column
+            &:first-child
+                margin-right: 16px
+            &:nth-child(n + 3)
+                padding-left: 12px
+                margin-left: 12px
+        &__title
+            min-width: 150px
+            min-height: 28px
+            font-size: 12px
+        &__subtitle
+            min-height: 28px
+            font-size: 10px
+        &__elem
+            min-height: 28px
+            font-size: 20px
     .rivers
         background-position: center left 40%
         &--mobile
