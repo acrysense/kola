@@ -70,6 +70,8 @@
         &__item
             &:nth-child(n + 7)
                 margin-top: 60px
+    .grid
+        grid-template-columns: repeat(auto-fit, minmax(245px, 1fr))
 
 @media (max-width: 1749px)
     .contacts
@@ -1375,9 +1377,11 @@
                 & > .rivers__dot
                     margin-left: 32px
 
-@media screen and (min-width: 320px)
+@media (min-width: 320px) and (max-width: 1749px)
     .grid
         grid-template-columns: repeat(auto-fit, minmax(125px, 1fr))
+
+@media (min-width: 320px)
     .grid .span-h
         grid-column: span 2
     .grid .span-v
