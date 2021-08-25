@@ -567,8 +567,15 @@ document.addEventListener('DOMContentLoaded', function () {
         thumbs: {
             autoStart: true,
             axis: 'x'
-        }
+        },
     });
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        beforeShow: function(){
+            console.log('Ok')
+            this.title =  this.title + " - " + $(this.element).data("caption");
+        }
+    })
 
     document.querySelectorAll('[data-fancybox="gallery"]').forEach(item => {
         item.addEventListener('click', (event) => {
